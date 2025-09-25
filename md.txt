@@ -5,7 +5,7 @@ Xử lý ngoại lệ (try, except) -> Làm việc với file (đọc/ghi file t
 
 OOP  (class, object, kế thừa, đóng gói, đa hình) -> Module và package
 
-các thư viện hữu ích  os, sys, datetime, json, csv ->> collection, itertools, functools
+các thư viện hữu ích  os, sys, datetime, json, csv ->> collection, itertools, functools, traceback ,ort warnings
 
 Flask / Django
 requests, BeautifulSoup, Selenium

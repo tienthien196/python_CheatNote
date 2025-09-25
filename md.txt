@@ -1,0 +1,14 @@
+Biến, kiểu dữ liệu (int, float, str, bool, list, tuple, dict, set)
+
+Xử lý ngoại lệ (try, except) -> Làm việc với file (đọc/ghi file text)
+
+
+OOP  (class, object, kế thừa, đóng gói, đa hình) -> Module và package
+
+các thư viện hữu ích  os, sys, datetime, json, csv ->> collection, itertools, functools
+
+Flask / Django
+requests, BeautifulSoup, Selenium
+Pandas, NumPy, Matplotlib, Scikit-learn
+
+conda -> requirement.txt

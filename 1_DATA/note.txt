@@ -6,3 +6,12 @@
 """
 phía dev -> danh sách truy cạp -> tính duy nhất HS 
 phía user -> đám bảo chính xác thông tin user  -> tính bất biến
+
+
+# toán tử IN tỏng comprehension sẽ cho ra res mội lần lặp -> chứ ko phải cahjy hết 1 lần  
+
+> DICTIONARY 
+
+# init  -> form tuple -> 1 ARR , 2 ARR
+# get  -> keys -> values-> items-> -> setdefault -> copy -> update -> pop -> clear 
+# 2 dict -> 1 dict -> all() | any()

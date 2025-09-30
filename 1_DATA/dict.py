@@ -16,7 +16,7 @@ def print_section(title):
 
 def print_example(method, desc, result):
     """In ví dụ theo định dạng chuẩn"""
-    print(f"{method:<35} | {desc:<28} | Kết quả: {result}")
+    print(f"{method:<45} | {desc:<28} | Kết quả: {result}")
 
 # Dữ liệu mẫu
 d_empty = {}

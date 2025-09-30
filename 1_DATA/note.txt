@@ -1,0 +1,8 @@
+"""
+    danh sách quản lí Dictionary
+    danh sách truy cập Set {1,2,3,4,5} -> tính duy nhất
+    danh sách truy cập Array [1,2,3,4, 4]
+    danh sách truy cập Tuple (1,2,3,4,4) -> tính bất biến
+"""
+phía dev -> danh sách truy cạp -> tính duy nhất HS 
+phía user -> đám bảo chính xác thông tin user  -> tính bất biến

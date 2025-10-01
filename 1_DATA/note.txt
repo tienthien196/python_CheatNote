@@ -6,7 +6,9 @@
 """
 phía dev -> danh sách truy cạp -> tính duy nhất HS 
 phía user -> đám bảo chính xác thông tin user  -> tính bất biến
-
+---
+Bộ sưu tập -> tính duy nhất     + RULE  -> ko hteer thay đổi luật vô hình này => tuân theo 
+HĐ quan tọng -> itnsh bát biến  + RULE
 
 # toán tử IN tỏng comprehension sẽ cho ra res mội lần lặp -> chứ ko phải cahjy hết 1 lần  
 
@@ -15,3 +17,23 @@ phía user -> đám bảo chính xác thông tin user  -> tính bất biến
 # init  -> form tuple -> 1 ARR , 2 ARR
 # get  -> keys -> values-> items-> -> setdefault -> copy -> update -> pop -> clear 
 # 2 dict -> 1 dict -> all() | any()
+
+<-KHÔNG GIAN CẤU TRÚC-> 
+    | # # # # # # |
+    | # # # # # # | 
+    | # # # # # # |
+    | # # # # # # |
+
+-------------------------------     -> CHECKING 
+    ^             |    SORT,REVERSE
+    |             V          | 
+   NHẬP          XUẤT       SỮA     XOÁ
+    ^              |         |       |
+    |              V         v       v
+   TẠO           SIZE       EDIT    POP,CLEAR 
+                   |
+                   V
+                len, count, min, max(INDEX)
+                   |
+                   v
+                INDEX- VALUES(1 OR 1.)

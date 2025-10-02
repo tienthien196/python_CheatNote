@@ -13,6 +13,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 
+
 def print_section(title):
     """In tiêu đề nhóm phương thức"""
     print("\n" + "=" * 70)

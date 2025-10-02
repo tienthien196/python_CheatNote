@@ -473,4 +473,75 @@ Special (Magic) Methods in Python Classes
     ├── __cmp__(self, other)     → ❌ ĐÃ LOẠI BỎ trong Python 3
     └── __nonzero__(self)        → ❌ Thay bằng __bool__(self) trong Python 3
         → Dùng __bool__ để kiểm tra truthiness (if obj: ...)
+🖥️ OS Module in Python (`import os`)
+│  
+├── 🗂️ 1. Làm việc với đường dẫn (Path Operations)
+│   ├── os.path.join(path, *paths)        → Ghép các phần thành đường dẫn hợp lệ (tự chọn '/' hay '\')
+│   ├── os.path.abspath(path)             → Trả về đường dẫn tuyệt đối
+│   ├── os.path.basename(path)            → Trả về tên file/folder cuối cùng (sau dấu '/')
+│   ├── os.path.dirname(path)             → Trả về thư mục chứa (phần trước dấu '/')
+│   ├── os.path.exists(path)              → Kiểm tra đường dẫn có tồn tại không?
+│   ├── os.path.isfile(path)              → Kiểm tra có phải file?
+│   ├── os.path.isdir(path)               → Kiểm tra có phải thư mục?
+│   ├── os.path.getsize(path)             → Trả về kích thước file (byte)
+│   └── os.path.split(path)               → Tách thành (head, tail) → (thư_mục, tên_file)
+│
+├── 📁 2. Quản lý thư mục & file
+│   ├── os.listdir(path='.')              → Liệt kê nội dung thư mục (trả về list tên)
+│   ├── os.mkdir(path)                    → Tạo 1 thư mục
+│   ├── os.makedirs(path, exist_ok=False) → Tạo nhiều thư mục lồng nhau (như mkdir -p)
+│   ├── os.remove(path)                   → Xóa file (⚠️ không xóa thư mục!)
+│   ├── os.rmdir(path)                    → Xóa thư mục trống
+│   ├── os.removedirs(path)               → Xóa thư mục lồng nhau (nếu trống)
+│   ├── os.rename(src, dst)               → Đổi tên hoặc di chuyển file/thư mục
+│   └── os.walk(top)                      → Duyệt đệ quy thư mục → (root, dirs, files)
+│
+├── 🌐 3. Thông tin hệ thống & môi trường
+│   ├── os.getcwd()                       → Trả về thư mục làm việc hiện tại
+│   ├── os.chdir(path)                    → Đổi thư mục làm việc
+│   ├── os.environ                        → Dict chứa biến môi trường (vd: os.environ['PATH'])
+│   ├── os.getenv(key, default=None)      → Lấy giá trị biến môi trường (an toàn hơn os.environ[key])
+│   └── os.name                           → Tên hệ điều hành: 'posix' (Linux/macOS), 'nt' (Windows)
+│
+├── 🧪 4. Thực thi lệnh hệ thống (cẩn thận!)
+│   ├── os.system(command)                → Chạy lệnh shell và trả về mã thoát (0 = thành công)
+│   └── os.popen(command)                 → ⚠️ LỖI THỜI! → Dùng subprocess thay thế
+│
+└── 🚪 5. Hằng số & tiện ích hệ thống
+    ├── os.sep                            → Ký tự phân cách đường dẫn: '/' (Unix), '\\' (Windows)
+    ├── os.linesep                        → Ký tự ngắt dòng: '\n' (Unix), '\r\n' (Windows)
+    ├── os.curdir                         → Tên thư mục hiện tại: '.'
+    └── os.pardir                         → Tên thư mục cha: '..'
+
+🐍 SYS Module in Python (`import sys`)
+│  
+├── 🧾 1. Thông tin & cấu hình Python
+│   ├── sys.version                       → Chuỗi mô tả phiên bản Python đang chạy
+│   ├── sys.version_info                  → Tuple: (major, minor, micro, releaselevel, serial)
+│   ├── sys.platform                      → Tên nền tảng: 'linux', 'win32', 'darwin' (macOS)
+│   ├── sys.executable                    → Đường dẫn đến trình thông dịch Python
+│   └── sys.byteorder                     → Kiểu sắp xếp byte: 'little' hoặc 'big'
+│
+├── 📦 2. Quản lý module & đường dẫn import
+│   ├── sys.path                          → List các thư mục tìm module khi import
+│   ├── sys.modules                       → Dict chứa tất cả module đã được import
+│   └── sys.meta_path                     → Danh sách các meta importers (custom import)
+│
+├── 🖥️ 3. Tương tác với dòng lệnh (CLI)
+│   ├── sys.argv                          → List đối số dòng lệnh: argv[0] = tên script
+│   ├── sys.stdin                         → Luồng đầu vào chuẩn (file-like object)
+│   ├── sys.stdout                        → Luồng đầu ra chuẩn
+│   ├── sys.stderr                        → Luồng lỗi chuẩn
+│   └── sys.exit([code])                  → Thoát chương trình ngay (mã 0 = thành công)
+│
+├── ⚙️ 4. Cấu hình & giới hạn hệ thống
+│   ├── sys.getsizeof(object)             → Trả về kích thước bộ nhớ (byte) của đối tượng
+│   ├── sys.maxsize                       → Số nguyên lớn nhất mà Py_ssize_t có thể biểu diễn
+│   ├── sys.getrecursionlimit()           → Giới hạn đệ quy mặc định (thường là 1000)
+│   └── sys.setrecursionlimit(limit)      → Thay đổi giới hạn đệ quy (⚠️ cẩn thận!)
+│
+└── 🔁 5. Quản lý vòng đời chương trình
+    ├── sys.ps1, sys.ps2                  → Chuỗi prompt của REPL (chỉ trong interactive mode)
+    ├── sys.__stdin__, sys.__stdout__, sys.__stderr__ → Bản sao gốc của stdin/stdout/stderr
+    └── sys.displayhook(value)            → Hàm được gọi khi in kết quả biểu thức trong REPL
 ```

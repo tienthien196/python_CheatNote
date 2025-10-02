@@ -16,6 +16,24 @@
             --success: #10b981;
             --warning: #f59e0b;
             --danger: #ef4444;
+            --purple: #6d28d9;
+            --red: #dc2626;
+            --green: #16a34a;
+            --blue: #0ea5e9;
+            --orange: #f59e0b;
+            --teal: #14b8a6;
+            --indigo: #4f46e5;
+            --yellow: #f59e0b;
+            --pink: #ec4899;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
         }
         
         * {
@@ -27,8 +45,9 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            color: var(--secondary);
+            color: var(--gray-800);
             line-height: 1.6;
+            min-height: 100vh;
         }
         
         .container {
@@ -52,18 +71,38 @@
             color: var(--primary-dark);
             margin-bottom: 10px;
             font-weight: 800;
+            letter-spacing: -0.5px;
         }
         
         .subtitle {
-            color: var(--gray);
+            color: var(--gray-600);
             font-size: 1.1rem;
+            margin-bottom: 20px;
         }
         
         .loading {
             text-align: center;
             padding: 40px;
             font-size: 1.2rem;
-            color: var(--gray);
+            color: var(--gray-500);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .loading-spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid var(--primary);
+            border-radius: 50%;
+            border-top: 3px solid transparent;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         
         .error {
@@ -74,6 +113,7 @@
             margin: 20px 0;
             text-align: center;
             font-weight: 500;
+            border-left: 4px solid var(--danger);
         }
         
         .categories {
@@ -100,6 +140,7 @@
             justify-content: space-between;
             align-items: center;
             transition: background-color 0.3s ease;
+            position: relative;
         }
         
         .category-header:hover {
@@ -135,6 +176,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .subcategory-header:hover {
+            background: var(--gray-200);
         }
         
         .subcategory-content {
@@ -158,6 +204,12 @@
             border-radius: 8px;
             border-left: 4px solid var(--primary);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .function-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         .function-name {
@@ -165,19 +217,107 @@
             color: var(--primary-dark);
             font-family: 'Courier New', monospace;
             margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .function-name::before {
+            content: "▸";
+            color: var(--primary);
+            font-weight: bold;
         }
         
         .function-desc {
-            color: var(--gray);
+            color: var(--gray-600);
             font-size: 0.95rem;
+            line-height: 1.4;
         }
         
         .chevron {
             transition: transform 0.3s ease;
+            font-size: 0.8rem;
         }
         
         .chevron.rotated {
             transform: rotate(180deg);
+        }
+        
+        .search-container {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            outline: none;
+        }
+        
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-400);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        
+        .badge-built-in {
+            background: var(--blue);
+            color: white;
+        }
+        
+        .badge-method {
+            background: var(--green);
+            color: white;
+        }
+        
+        .badge-string {
+            background: var(--orange);
+            color: white;
+        }
+        
+        .badge-file {
+            background: var(--purple);
+            color: white;
+        }
+        
+        .badge-datetime {
+            background: var(--teal);
+            color: white;
+        }
+        
+        .badge-random {
+            background: var(--pink);
+            color: white;
+        }
+        
+        .badge-math {
+            background: var(--indigo);
+            color: white;
+        }
+        
+        .badge-special {
+            background: var(--red);
+            color: white;
         }
         
         @media (max-width: 768px) {
@@ -202,18 +342,268 @@
             .function-item {
                 padding: 10px;
             }
+            
+            .function-name {
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* Enhanced styling for a more professional look */
+        .professional-category {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .professional-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .professional-header:hover {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        }
+        
+        .professional-content {
+            padding: 20px;
+            display: none;
+        }
+        
+        .professional-content.active {
+            display: block;
+        }
+        
+        .professional-subcategory {
+            background: var(--gray-50);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        
+        .professional-subheader {
+            background: var(--gray-200);
+            padding: 15px;
+            font-weight: 600;
+            color: var(--gray-800);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .professional-subheader:hover {
+            background: var(--gray-300);
+        }
+        
+        .professional-subcontent {
+            padding: 15px;
+            display: none;
+            background: white;
+        }
+        
+        .professional-subcontent.active {
+            display: block;
+        }
+        
+        .professional-functions {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .professional-function {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .professional-function:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left-color: var(--primary-dark);
+        }
+        
+        .professional-function::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .professional-function-name {
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+        
+        .professional-function-name::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .professional-function-desc {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.4;
+            padding-left: 16px;
+        }
+        
+        .professional-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .professional-badge-built-in {
+            background: var(--blue);
+            color: white;
+        }
+        
+        .professional-badge-method {
+            background: var(--green);
+            color: white;
+        }
+        
+        .professional-badge-string {
+            background: var(--orange);
+            color: white;
+        }
+        
+        .professional-badge-file {
+            background: var(--purple);
+            color: white;
+        }
+        
+        .professional-badge-datetime {
+            background: var(--teal);
+            color: white;
+        }
+        
+        .professional-badge-random {
+            background: var(--pink);
+            color: white;
+        }
+        
+        .professional-badge-math {
+            background: var(--indigo);
+            color: white;
+        }
+        
+        .professional-badge-special {
+            background: var(--red);
+            color: white;
+        }
+        
+        .professional-search {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            outline: none;
+            background: white;
+        }
+        
+        .professional-search:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .professional-search::placeholder {
+            color: var(--gray-400);
+        }
+        
+        .professional-loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2rem;
+            color: var(--gray-500);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .professional-error {
+            background: #fee2e2;
+            color: var(--danger);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: 500;
+            border-left: 4px solid var(--danger);
+        }
+        
+        .professional-header-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .professional-header-title::before {
+            content: "🐍";
+            font-size: 1.5rem;
+        }
+        
+        .professional-category-count {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🐍 Python Cheat Sheet</h1>
-            <p class="subtitle">Infographic-style reference for Python built-in functions, methods, and modules</p>
+            <h1>Python Cheat Sheet</h1>
+            <p class="subtitle">Professional reference guide for Python built-in functions, methods, and modules</p>
         </header>
         
-        <div id="loading" class="loading">Loading cheat sheet data...</div>
-        <div id="error" class="error" style="display: none;"></div>
+        <div class="search-container">
+            <input type="text" id="searchInput" class="professional-search" placeholder="Search functions, methods, or categories...">
+        </div>
+        
+        <div id="loading" class="professional-loading">
+            <div class="loading-spinner"></div>
+            <span>Loading cheat sheet data...</span>
+        </div>
+        <div id="error" class="professional-error" style="display: none;"></div>
         <div id="categories" class="categories"></div>
     </div>
 
@@ -241,7 +631,7 @@
             
             // If expanding, show all subcategories by default
             if (!isActive) {
-                const subcategoryHeaders = content.querySelectorAll('.subcategory-header');
+                const subcategoryHeaders = content.querySelectorAll('.professional-subheader');
                 subcategoryHeaders.forEach(header => {
                     const subContent = header.nextElementSibling;
                     const subChevron = header.querySelector('.chevron');
@@ -254,24 +644,53 @@
         }
 
         // Create subcategory element
-        function createSubcategory(title, functions) {
-            const subcategory = createElement('div', 'subcategory');
+        function createSubcategory(title, functions, categoryTitle) {
+            const subcategory = createElement('div', 'professional-subcategory');
             
-            const header = createElement('div', 'subcategory-header');
+            const header = createElement('div', 'professional-subheader');
             header.textContent = title;
             
             const chevron = createElement('span', 'chevron');
             chevron.innerHTML = '▼';
             header.appendChild(chevron);
             
-            const content = createElement('div', 'subcategory-content');
+            const content = createElement('div', 'professional-subcontent');
             
-            const functionsDiv = createElement('div', 'functions');
+            const functionsDiv = createElement('div', 'professional-functions');
             Object.entries(functions).forEach(([funcName, description]) => {
-                const funcItem = createElement('div', 'function-item');
-                const name = createElement('div', 'function-name', funcName);
-                const desc = createElement('div', 'function-desc', description);
-                funcItem.appendChild(name);
+                const funcItem = createElement('div', 'professional-function');
+                
+                const nameContainer = createElement('div', 'professional-function-name');
+                nameContainer.textContent = funcName;
+                
+                // Add badge based on category
+                let badgeClass = '';
+                if (categoryTitle.includes('Built-in Functions')) {
+                    badgeClass = 'professional-badge-built-in';
+                } else if (categoryTitle.includes('Methods')) {
+                    badgeClass = 'professional-badge-method';
+                } else if (categoryTitle.includes('String Methods')) {
+                    badgeClass = 'professional-badge-string';
+                } else if (categoryTitle.includes('File Object')) {
+                    badgeClass = 'professional-badge-file';
+                } else if (categoryTitle.includes('Datetime')) {
+                    badgeClass = 'professional-badge-datetime';
+                } else if (categoryTitle.includes('Random')) {
+                    badgeClass = 'professional-badge-random';
+                } else if (categoryTitle.includes('Math')) {
+                    badgeClass = 'professional-badge-math';
+                } else if (categoryTitle.includes('Special Methods')) {
+                    badgeClass = 'professional-badge-special';
+                }
+                
+                if (badgeClass) {
+                    const badge = createElement('span', `professional-badge ${badgeClass}`);
+                    badge.textContent = categoryTitle.split(' ')[0];
+                    nameContainer.appendChild(badge);
+                }
+                
+                const desc = createElement('div', 'professional-function-desc', description);
+                funcItem.appendChild(nameContainer);
                 funcItem.appendChild(desc);
                 functionsDiv.appendChild(funcItem);
             });
@@ -289,20 +708,28 @@
 
         // Create category element
         function createCategory(title, subcategories) {
-            const category = createElement('div', 'category');
+            const category = createElement('div', 'professional-category');
             
-            const header = createElement('div', 'category-header');
-            header.textContent = title;
+            const header = createElement('div', 'professional-header');
+            const headerTitle = createElement('div', 'professional-header-title');
+            headerTitle.textContent = title;
+            
+            // Add count badge
+            const countBadge = createElement('span', 'professional-category-count');
+            countBadge.textContent = Object.keys(subcategories).length + ' sections';
+            headerTitle.appendChild(countBadge);
+            
+            header.appendChild(headerTitle);
             
             const chevron = createElement('span', 'chevron');
             chevron.innerHTML = '▼';
             header.appendChild(chevron);
             
-            const content = createElement('div', 'category-content');
+            const content = createElement('div', 'professional-content');
             
             const subcategoriesDiv = createElement('div', 'subcategories');
             Object.entries(subcategories).forEach(([subTitle, functions]) => {
-                const subcategory = createSubcategory(subTitle, functions);
+                const subcategory = createSubcategory(subTitle, functions, title);
                 subcategoriesDiv.appendChild(subcategory);
             });
             
@@ -317,6 +744,75 @@
             return category;
         }
 
+        // Search functionality
+        function setupSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const categories = document.getElementById('categories');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                
+                if (searchTerm === '') {
+                    // Show all categories
+                    document.querySelectorAll('.professional-category').forEach(cat => {
+                        cat.style.display = 'block';
+                    });
+                    document.querySelectorAll('.professional-subcategory').forEach(sub => {
+                        sub.style.display = 'block';
+                    });
+                    document.querySelectorAll('.professional-function').forEach(func => {
+                        func.style.display = 'block';
+                    });
+                    return;
+                }
+                
+                // Hide all elements initially
+                document.querySelectorAll('.professional-category').forEach(cat => {
+                    cat.style.display = 'none';
+                });
+                
+                // Search through all functions
+                let foundCount = 0;
+                
+                document.querySelectorAll('.professional-function').forEach(func => {
+                    const funcName = func.querySelector('.professional-function-name').textContent.toLowerCase();
+                    const funcDesc = func.querySelector('.professional-function-desc').textContent.toLowerCase();
+                    
+                    if (funcName.includes(searchTerm) || funcDesc.includes(searchTerm)) {
+                        // Show the function
+                        func.style.display = 'block';
+                        
+                        // Show its parent subcategory
+                        const subcategory = func.closest('.professional-subcategory');
+                        if (subcategory) {
+                            subcategory.style.display = 'block';
+                            
+                            // Show its parent category
+                            const category = subcategory.closest('.professional-category');
+                            if (category) {
+                                category.style.display = 'block';
+                                foundCount++;
+                            }
+                        }
+                    } else {
+                        func.style.display = 'none';
+                    }
+                });
+                
+                // If no results found, show a message
+                if (foundCount === 0) {
+                    const noResults = document.createElement('div');
+                    noResults.style.textAlign = 'center';
+                    noResults.style.padding = '20px';
+                    noResults.style.color = 'var(--gray-600)';
+                    noResults.style.fontSize = '1.1rem';
+                    noResults.textContent = `No results found for "${searchTerm}"`;
+                    categories.innerHTML = '';
+                    categories.appendChild(noResults);
+                }
+            });
+        }
+
         // Load data from GitHub
         async function loadCheatSheet() {
             const loadingEl = document.getElementById('loading');
@@ -324,7 +820,7 @@
             const categoriesEl = document.getElementById('categories');
             
             try {
-                const response = await fetch('https://raw.githubusercontent.com/tienthien196/note/main/data.json');
+                const response = await fetch('https://raw.githubusercontent.com/tienthien196/python_CheatNote/main/1_DATA/data.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -339,11 +835,14 @@
                     categoriesEl.appendChild(category);
                 });
                 
+                // Setup search after data is loaded
+                setupSearch();
+                
             } catch (error) {
                 console.error('Error loading cheat sheet:', error);
                 loadingEl.style.display = 'none';
                 errorEl.style.display = 'block';
-                errorEl.textContent = `Failed to load cheat sheet data: ${error.message}`;
+                errorEl.textContent = `Failed to load cheat sheet: ${error.message}`;
             }
         }
 

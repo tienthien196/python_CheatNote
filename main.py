@@ -1,3 +1,5 @@
+import numpy as np
+import pandas as pds
 class people():
 
     height  = 190

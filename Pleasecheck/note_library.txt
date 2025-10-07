@@ -1,0 +1,81 @@
+1. Core & hệ thống
+os, sys, time, datetime, pathlib, shutil, subprocess, argparse, logging, warnings, pickle, json, yaml, toml, dotenv, typing, dataclasses, enum, functools, itertools, collections, queue, threading, multiprocessing, concurrent.futures, asyncio, signal, gc, tracemalloc, psutil, resource, ipaddress, uuid, socket (built-in), select, selectors, ssl
+
+2. Toán & mảng khoa học
+numpy, scipy, pandas, numba, cython, cupy, dask, jax, einops, opt_einsum, bottleneck, numexpr, bitarray, bitstring, gmpy2
+
+3. Trực quan hoá & xuất bản
+matplotlib, seaborn, plotly, bokeh, altair, holoviews, hvplot, pandas-profiling, sweetviz, autoviz, streamlit, gradio, dash, panel, voila, jupyter, ipywidgets, netgraph, pyvis, graphviz
+
+4. Học máy tổng quát
+scikit-learn (sklearn), sklearn-pandas, imbalanced-learn, category_encoders, feature-engine, mlxtend, pycaret, lazypredict, xgboost, lightgbm, catboost, ngboost, optuna, hyperopt, scikit-optimize, ray[tune]
+
+5. Deep-learning framework chính
+torch, torchvision, torchaudio, torchtext, pytorch-lightning, ignite, fastai, accelerate, transformers, diffusers, opacus, captum, onnx, onnxruntime
+tensorflow, tf.keras, tensorflow-hub, tensorflow-addons, tensorflow-probability, tensorflow-federated, tfx, tf-agents
+jax, flax, haiku, optax, brax, rlax
+mxnet, gluon, paddle, oneflow, mindspore
+
+6. Thị giác máy tính (CV)
+Pillow (PIL), imageio, scikit-image, opencv-python (cv2), albumentations, imgaug, torchvision.transforms, kornia, mmcv, mmdetection, detectron2, yolov5/7/8, ultralytics, segmentation-models-pytorch, timm, paddleseg, face-recognition, dlib, mediapipe, open3d, pyntcloud, trimesh
+
+7. Xử lý ngôn ngữ tự nhiên (NLP)
+nltk, spacy, textblob, gensim, fasttext, sentence-transformers, tokenizers, datasets, evaluate, bert-score, rouge-score, sacrebleu, jiwer, whisper, librosa, soundfile, speechbrain, nemo, paddlespeech
+
+8. Học tăng cường & Agent
+gym, gymnasium, stable-baselines3, rllib (ray[rllib]), dopamine, acme, seed_rl, tf-agents, brax, pettingzoo, multi-agent-emergence, langchain, langgraph, autogen, crewai, semantic-kernel, smolagents, transformers-agent, huggingface-rl-baselines
+
+9. Đồ thị & tri thức
+networkx, igraph, graph-tool, stellargraph, dgl, pyg (pytorch-geometric), spektral, karateclub, node2vec, pykeen, ampligraph, rdflib, sparqlwrapper, neo4j-python-driver, memgraph, kuzu, tigergraph, networkit
+
+10. Cơ sở dữ liệu & BigData
+sqlalchemy, psycopg2, pymongo, redis, cassandra-driver, elasticsearch, clickhouse-driver, pyspark, koalas, dask, ray[data], modin, vaex, polars, duckdb
+
+11. MLOps & theo dõi thí nghiệm
+mlflow, wandb, neptune, tensorboard, sacred, omniboard, dagshub, clearml, dvc, cml, pachyderm, bentoml, cog, seldon-core, kserve, feast, tecton, hopsworks, flyte, kubeflow, prefect, airflow, zenml, guildai
+
+12. Triển khai & tối ưu
+fastapi, flask, django, starlette, uvicorn, gunicorn, celery, ray[serve], torchserve, tensorflow-serving, onnxruntime-gpu, tensorrt, openvino, tflite, coremltools, tvm, apache-tvm, bitsandbytes, auto-gptq, exllama, vllm, deepspeed, fairscale, colossalai, horovod, accelerate, FSDP
+
+13. Tiện ích & tiến trình
+tqdm, rich, colorama, termcolor, click, typer, fire, alive-progress, progressbar2, schedule, pytz, tzlocal, python-dotenv, bandit, black, isort, flake8, mypy, pre-commit, pytest, hypothesis, coverage, tox, nox, poethepoet, pipenv, poetry, conda, mamba
+
+14. Mạng & giao thức (Network)
+- Socket thuần: socket, select, selectors, ssl, ipaddress, raw-packet, socketraw
+- Giao thức ứng dụng:
+  HTTP: requests, httpx, aiohttp, grequests, httpx[http2]
+  WebSocket: websocket-client, websockets, wsproto
+  MQTT: paho-mqtt, gmqtt, hbmqtt
+  Kafka: kafka-python, aiokafka, confluent-kafka
+  RabbitMQ: pika, aio-pika
+  ZeroMQ: zeromq, pyzmq, aiozmq
+  gRPC: grpcio, grpcio-tools, grpclib
+  DNS: dnspython, aio-dns, dnslib
+  FTP/SSH/Telnet: ftplib, paramiko, telnetlib3, scrapli, netmiko
+  Email: smtplib, imaplib, aiogram, mailbox, yagmail, redmail, O365, exchangelib, imap-tools
+  SNMP: pysnmp, easysnmp
+- Deep packet / Sniffer / Spoof: scapy, kamene, pyshark, dpkt, impacket, pypcapfile, libpcap, pcapkit, construct, binary-refinery, binwalk, netfilterqueue
+- Port-scanner & Recon: python-nmap, nmap, asyncio-portscanner, aio-scanner, masscan, zmap-python, shodan, censys, zoomeye-api, sslyze
+- Async framework: asyncio, trio, curio, anyio, twisted, tornado, uvloop, janus, aiostream
+- Proxy / MITM / Tunnel: mitmproxy, proxy.py, httptools, h11, h2, aio-socks, pysocks, paramiko[proxy], ssh2-python, shadowsocks-py, wireguard-py, pyOpenSSL, cryptography, certbuilder, truststore
+- VPN / SD-WAN: wireguard-python, pywireguard, wgconfig, strongswan-python, openvpn-python
+- Network emulation: mininet, mininet-wifi, containernet, maxinet, coreemu, gns3-gui, eve-ng-python-api, ns-3-python, omnetpp-python
+- Cloud & K8s network: kubernetes, openshift-client, pyvcloud, boto3, azure-mgmt-network, google-cloud-compute, oci, terraform-cdk, pulumi, troposphere, istio-client, flagger-py, linkerd-istio-prometheus
+- Monitoring / IDS: prometheus-client, py-snmp, elasticsearch-py, influxdb-client, graypy, logstash-formatter, zeek-python, suricata-py, py-idstools, scirius, moloch-py
+- Performance benchmark: iperf3-python, netperf-wrapper, locust, molotov, wrk-py, vegeta-py, fortio-py, psutil, py-spy, line_profiler, memory_profiler, py-flame, bcc-tools
+
+15. Tự động hoá (Automation)
+- CLI & UX: click, typer, argparse-color, rich, colorama, termcolor, blessed, prompt-toolkit, questionary, pyfiglet, halo, spinners, beepy, plyer, pynotifier, win10toast, pystray, tkinter, PySimpleGUI, Gooey, dearpygui, flet, textual, urwid
+- Auto GUI (chuột/bàn phím/màn hình): pyautogui, pynput, mouse, keyboard, pygetwindow, pywinauto, pywin32, lackey, MSS, dxcam, pyscreenshot, autopy, robotframework-seleniumlibrary, selenium, helium, playwright, splinter, pyppeteer
+- Auto Office & PDF: openpyxl, xlsxwriter, xlwings, pyxlsb, xlrd, xlwt, python-docx, docxtpl, docx2pdf, pypandoc, python-pptx, comtypes, win32com, odfpy, ezodf, reportlab, pypdf, pypdf2, pdfplumber, pdfminer-six, camelot, tabula-py, weasyprint, pdfkit, img2pdf, pdfrw, borb, fitz (PyMuPDF)
+- Auto Web / API / Scraping: beautifulsoup4, lxml, html5lib, parsel, selectolax, bleach, scrapy, pyspider, mechanicalsoup, autoscraper, goose3, newspaper3k, trafilatura, readabilipy, cloudscraper, cfscrape, anti-bot-stealth
+- Auto System (Windows): winreg, wmi, psutil, pywin32, win32com, winsound, ctypes, pyuac, elevate, admin, regipy, pylnk, pywintypes, olefile, windows-curses
+- Auto Linux/Unix: sh, pexpect, fabric, invoke, spur, ansible-runner, salt-pepper, subprocess-tee, ptyprocess, gnureadline, python-daemon
+- File watcher / sync: watchdog, fswatch, pyinotify, inotify-simple, entr-python, dirsync, rsync-py, pyrsync, dircrawler, glob2, wcmatch, pathspec, patool, pyunpack, rarfile, py7zr, zipfile36, tarfile, gzip, bz2, lzma, zstandard, snappy, brotli
+- Image / Video / OCR: pillow, opencv-python, imageio, moviepy, scenedetect, ffmpeg-python, pydub, speech_recognition, pyttsx3, pytesseract, easyocr, paddleocr, keras-ocr, dxcam, mss
+- Macro-Recorder: pyautogui, pynput, keyboard, mouse, pywin32, evdev, pyuserinput, autopy, robotjs-python, airtest, lackey
+- Job / Pipeline / Cron: schedule, apscheduler, celery, redis, rq, arq, dramatiq, huey, airflow, prefect, dagster, luigi, doit, snakemake, pyflow, rocketry, croniter, pycron
+- Build & đóng gói: pyinstaller, cx-freeze, fbs-qt, nuitka, pyarmor, shiv, pex, zipapp, briefcase, py2app, py2exe, nsis-py, gpo-python
+- Cloud & DevOps glue: boto3, azure-identity, azure-mgmt-, google-cloud-, oci, kubernetes, openshift-client, docker, podman-py, lxd-python, proxmoxer, vmware-pyvmomi, salt, ansible, ghapi, pygithub, gitpython, dulwich, python-gitlab
+- Security & Reverse: hashlib, secrets, cryptography, passlib, bcrypt, scapy, impacket, pwntools, ropper, capstone, keystone, unicorn, frida-python, objection, androguard, apk-tool-py, qiling, pycdc, pyinstxtractor
+- Audio / Screenshot / Alert: playsound, pydub, pyttsx3, speech_recognition, pyaudio, sounddevice, wave, winsound, simpleaudio, beepy, plyer, pynotifier, pystray, tkinter.messagebox

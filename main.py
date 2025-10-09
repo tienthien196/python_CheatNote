@@ -1,23 +1,17 @@
-import numpy as np
-import pandas as pds
-class people():
+print(int("56")) # chỉ ép int nếu chuỗi là số -> error      
+# 9/10/2025 
+num = 1234567.89; print(f"{num:_.2f}")# cách format string, str có toán tử +, có thể *
+print(0.1+0.2==0.3) # số thực trong python là thập phân vô tỷ
 
-    height  = 190
-    width = 80
-    def  __init__(self, name, age):
-        self.name = name
-        self.age = age
-    
-    def cancought(self):
-        print(f"hello {self}")
+#loop >> interable thì có limit range >>
+#pythonic logic chuỗi  1<x<10 >> 1<x and x<10
+#under scope 
 
+for _ in range(70):
+    print(">> \n")
 
+# thuộc tính end của print , end default
+# print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)  DEFAULT
+# for i in range (1,6)-> thì mới chạy 1 ->5
 
-class tienthien(people):
-    def __init__(self, name, age):
-        super().__init__(name, age)
-if __name__ == "__main__":
-    p1 = people("Nguyen Van A", 20)
-    p2 = people("Nguyen Van B", 30)
-    print(p1.cancought)
-
+#toán tử  // lấy nguyên , 

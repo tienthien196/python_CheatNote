@@ -1,0 +1,173 @@
+{
+    "interaction_1550985937": {
+        "items": [
+            {
+                "items": [
+                    {
+                        "id": "e0",
+                        "version": 1,
+                        "value": "\t•\thave taught"
+                    },
+                    {
+                        "id": "e1",
+                        "version": 1,
+                        "value": "for fifteen yea"
+                    }
+                ],
+                "activityState": [
+                    {
+                        "filled": true,
+                        "correct": false,
+                        "id": "e0"
+                    },
+                    {
+                        "filled": true,
+                        "correct": false,
+                        "id": "e1"
+                    }
+                ]
+            },
+            {
+                "items": [
+                    {
+                        "id": "e0",
+                        "version": 1,
+                        "value": "haven’t flown"
+                    },
+                    {
+                        "id": "e1",
+                        "version": 1,
+                        "value": "\t•\tsince"
+                    }
+                ],
+                "activityState": [
+                    {
+                        "filled": true,
+                        "correct": true,
+                        "id": "e0"
+                    },
+                    {
+                        "filled": true,
+                        "correct": false,
+                        "id": "e1"
+                    }
+                ]
+            },
+            {
+                "items": [
+                    {
+                        "id": "e0",
+                        "version": 1,
+                        "value": "has "
+                    },
+                    {
+                        "id": "e1",
+                        "version": 1,
+                        "value": "for the last five years"
+                    }
+                ],
+                "activityState": [
+                    {
+                        "filled": true,
+                        "correct": false,
+                        "id": "e0"
+                    },
+                    {
+                        "filled": true,
+                        "correct": false,
+                        "id": "e1"
+                    }
+                ]
+            },
+            {
+                "items": [
+                    {
+                        "id": "e0",
+                        "version": 1,
+                        "value": "have "
+                    },
+                    {
+                        "id": "e1",
+                        "version": 1,
+                        "value": "since"
+                    }
+                ],
+                "activityState": [
+                    {
+                        "filled": true,
+                        "correct": false,
+                        "id": "e0"
+                    },
+                    {
+                        "filled": true,
+                        "correct": true,
+                        "id": "e1"
+                    }
+                ]
+            },
+            {
+                "items": [
+                    {
+                        "id": "e0",
+                        "version": 1,
+                        "value": "haven’t seen"
+                    },
+                    {
+                        "id": "e1",
+                        "version": 1,
+                        "value": "for"
+                    }
+                ],
+                "activityState": [
+                    {
+                        "filled": true,
+                        "correct": true,
+                        "id": "e0"
+                    },
+                    {
+                        "filled": true,
+                        "correct": true,
+                        "id": "e1"
+                    }
+                ]
+            },
+            {
+                "items": [
+                    {
+                        "id": "e0",
+                        "version": 1,
+                        "value": "has lived"
+                    },
+                    {
+                        "id": "e1",
+                        "version": 1,
+                        "value": "since"
+                    }
+                ],
+                "activityState": [
+                    {
+                        "filled": true,
+                        "correct": true,
+                        "id": "e0"
+                    },
+                    {
+                        "filled": true,
+                        "correct": true,
+                        "id": "e1"
+                    }
+                ]
+            }
+        ],
+        "status": "corrected",
+        "checkAttempts": 1,
+        "manualCheckAttempts": 0,
+        "solutionHint": false,
+        "notes": [],
+        "visited": true,
+        "checkAnswerOnSubmitPending": true
+    },
+    "duration": 400201,
+    "idleTime": 0,
+    "attemptID": "89b8d8c2-0177-41b6-a0f8-ac69b9bbc8bc",
+    "attempts": 1
+}

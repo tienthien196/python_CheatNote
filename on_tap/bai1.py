@@ -92,8 +92,8 @@ d1 = None and [] # []
 # name = input_name or "Anonymous"
 # return true cuối or flase đầu tiên
 
-c2 is bool # is là check 2 biến có cùng trỏ 1 ô nhớ ko ?
-c2 in [] # in check thành viên có trong iterable
+c2 is bool # is là check 2 biến có cùng trỏ 1 ô nhớ ko ? Trừ x is None
+c2 in [] # in check thành viên có trong iterable 
 isinstance(x, bool) # check xem biến có thuộc class hay kh ?
 
 # --- bitwise --- >> bit của số nguyên
@@ -181,4 +181,361 @@ not x == y # khác với not (x == y)
 
 # Bẫy tham số FUNCTION (Mutable default argument)
 # list += [1] được, nhưng tuple += (1,) tạo object mới
+# Nguyên nhân: closure 'bắt' tham chiếu đến i, không phải giá trị tại thời điểm
+# Hiểu sai về "pass by object reference"
 
+#--- bẫy 
+x = "   "
+if x:  # → True! Vì chuỗi không rỗng
+    ...
+
+y = -1
+if y:  # → True! Vì khác 0
+    ...
+
+...
+my_list = []
+
+# ❌ Không Pythonic, dễ lỗi nếu kiểu dữ liệu thay đổi
+if my_list == []:
+    ...
+
+# ✅ Pythonic: dùng truthiness
+if not my_list:
+    ...
+
+...
+status = "pending"
+
+# ❌ Sai: luôn True (vì "approved" là truthy)
+if status == "pending" or "approved":
+    print("OK")  # Luôn in!
+
+# ✅ Đúng
+if status == "pending" or status == "approved":
+    ...
+
+# ✅ Tốt hơn: dùng `in`
+if status in ("pending", "approved"):
+    ...
+
+...
+x = 0
+y = 5
+
+# ❌ Hiểu nhầm: nghĩ `x or y` trả về True/False
+if x or y:
+    print("OK")  # In ra, vì y truthy
+
+# Nhưng:
+result = x or y
+print(result)  # → 5, KHÔNG phải True!
+
+...
+x = 0
+y = 5
+
+# ❌ Hiểu nhầm: nghĩ `x or y` trả về True/False
+if x or y:
+    print("OK")  # In ra, vì y truthy
+
+# Nhưng:
+result = x or y
+print(result)  # → 5, KHÔNG phải True!
+
+# BẪY TRONG VÒNG LẶP
+funcs = []
+for i in range(3):
+    funcs.append(lambda: print(i))
+
+for f in funcs:
+    f()  # In: 2, 2, 2 → ❌ Mong muốn: 0, 1, 2
+
+...
+nums = [1, 2, 3, 4, 5]
+for x in nums:
+    if x % 2 == 0:
+        nums.remove(x)  # ❌ Nguy hiểm!
+
+print(nums)  # → [1, 3, 4, 5] → 4 không bị xóa!
+# Lý do: Khi xóa phần tử, các phần tử sau dịch về, con trỏ lặp bỏ sót phần tử tiếp theo. 
+# ✅ Cách sửa:
+
+# Lặp trên bản sao: for x in nums[:]:
+# Dùng list comprehension: nums = [x for x in nums if x % 2 != 0]
+# Lặp ngược: for i in range(len(nums)-1, -1, -1):
+
+...
+for i in range(3):
+    if i == 5:
+        break
+else:
+    print("Không gặp break")  # ✅ In ra
+
+# Nhưng:
+for i in range(3):
+    break
+else:
+    print("...")  # ❌ KHÔNG in
+#  else trong vòng lặp → hiểu nhầm là "luôn chạy"
+#  else trong for/while chỉ chạy nếu vòng lặp kết thúc bình thường (không bị break). 
+
+...
+items = ['a', 'b', 'c']
+
+# ❌ Không Pythonic
+for i in range(len(items)):
+    print(i, items[i])
+
+# ✅ Dùng `enumerate`
+for i, item in enumerate(items):
+    print(i, item)
+# Dùng range(len(...)) khi không cần thiết
+
+...
+d = {'a': 1, 'b': 2}
+
+# ❌ Hiểu nhầm: nghĩ lặp qua cặp (key, value)
+for x in d:
+    print(x)  # → 'a', 'b' (chỉ keys)
+
+# ✅ Muốn cặp:
+for k, v in d.items():
+    ...
+# LỖI PHỔ BIẾN  
+""" thục lề sai 
+if x > 0:
+print("OK")  # ❌ IndentationError
+
+# Hoặc tệ hơn: thụt lề sai nhưng không báo lỗi → logic sai
+if x > 0:
+    a = 1
+    if y > 0:
+    a = 2  # ❌ Dòng này không thuộc if y > 0!
+"""
+
+# BẪY TRONG HÀM  
+
+"""
+1. LEGB Rule – Quy tắc tìm kiếm biến
+Python tuân theo LEGB khi tìm biến:
+
+Local → trong hàm hiện tại
+Enclosing → trong hàm cha (closure)
+Global → trong module
+Built-in → như len, print, int, True...
+"""
+
+# ❌ SAI – dùng list/dict/set làm giá trị mặc định
+def add_item(item, target=[]):
+    target.append(item)
+    return target
+
+print(add_item(1))  # [1]
+print(add_item(2))  # [1, 2] ← GÌ? MONG MUỐN: [2]
+#  Mutable default argument (BẪY KINH ĐIỂN!)
+#sữa  Áp dụng cho: list, dict, set, [], {}, set(), custom object... 
+def add_item(item, target=None):
+    if target is None:
+        target = []
+    target.append(item)
+    return target
+...
+counter = 0
+
+def increment():
+    counter += 1  # ❌ UnboundLocalError!
+
+increment()
+# Thay đổi biến toàn cục mà không khai báo global
+# LƯU Ý ĐÂY LÀ BÀI DÙNG TRỰC TIẾP GLOBAL , CÒN BAI THAM SỐ TRÙNG TÊN GLOBAL
+# param tham số hàm  , argument đối số input
+# sữa >> chỉ áp dụng cho kiểu dữ liệu bất biến immutable , mutable thì thoải mái
+def increment():
+    global counter
+    counter += 1
+# tương tự -------------
+def outer():
+    x = 0
+    def inner():
+        x += 1  # ❌ UnboundLocalError!
+    inner()
+# Thay đổi biến trong closure mà không khai báo nonlocal (Python 3+) >> SỮA
+def outer():
+    x = 0
+    def inner():
+        nonlocal x
+        x += 1
+    inner()
+    return x
+
+...
+# ❌ Sai cú pháp
+# def f(**kwargs, *args): ...
+
+# ✅ Đúng: *args trước **kwargs
+def f(*args, **kwargs): ...
+
+...
+def modify_list(lst):
+    lst.append(4)  # Ảnh hưởng đến list gốc → OK
+
+def reassign_list(lst):
+    lst = [1, 2, 3]  # ❌ Không ảnh hưởng đến list gốc!
+
+my_list = [10]
+reassign_list(my_list)
+print(my_list)  # [10] ← không đổi!
+# ✅ Python không có "pass by value" hay "pass by reference" — mà là "pass by object reference
+
+
+# BẪY TRONG try...except
+def risky_code():...
+# ❌ RẤT NGUY HIỂM
+try:
+    risky_code()
+except:  # Bắt cả KeyboardInterrupt, SystemExit!
+    pass
+# sữa 
+def handle_error():...
+try:
+    risky_code()
+except ValueError as e:
+    handle_error(e)
+
+...
+# ❌ Sai: chỉ bắt `TypeError`, bỏ qua `ValueError`
+# except TypeError, ValueError:  # CÚ PHÁP LỖI ở Python 3!
+# sữa >> 
+try:...
+except (TypeError, ValueError) as e:
+    ...
+
+...
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Lỗi")
+else:
+    print("Không lỗi")  # ❌ KHÔNG chạy
+finally:
+    print("Luôn chạy")  # ✅ Chạy
+# Dùng else và finally không hiểu rõ
+# else: chỉ chạy nếu không có exception
+# finally: luôn chạy, kể cả có return, break, continue
+
+...
+def f():
+    try:
+        return "from try"
+    finally:
+        return "from finally"  # ✅ Ghi đè!
+
+print(f())  # "from finally"
+# → Cẩn thận khi return trong finally! 
+
+...
+def risky():...
+try:
+    risky()
+except ValueError:
+    print("Có lỗi")  # ❌ Mất thông tin lỗi gốc!
+
+# sữa  >>
+import logging
+
+try:
+    risky()
+except ValueError as e:
+    logging.exception("Lỗi khi xử lý")  # Giữ nguyên stack trace
+    # hoặc raise lại: raise
+
+...
+try:
+    risky()
+except ValueError:
+    # ❌ Mất stack trace gốc
+    raise ValueError("Lỗi mới")
+
+# ✅ Giữ nguyên stack trace
+except ValueError:
+    raise  # ← không có đối số
+
+# Hoặc: chain exception (Python 3)
+except ValueError as e:
+    raise RuntimeError("Lỗi mới") from e
+
+# raise lại exception sai cách → mất stack trace gốc
+
+...
+my_dict = {}
+# ❌ Không cần thiết – dùng if tốt hơn
+try:
+    value = my_dict['key']
+except KeyError:
+    value = None
+
+# ✅ Tốt hơn:
+value = my_dict.get('key')
+#  Dùng try...except để kiểm tra điều kiện (EAFP vs LBYL) – lạm dụng
+# → EAFP ("Easier to Ask for Forgiveness than Permission") là phong cách Python,
+# nhưng đừng lạm dụng khi có cách đơn giản hơn. 
+
+
+# config.py
+DEBUG = True
+
+# main.py
+import config
+config.DEBUG = False  # ✅ OK
+
+# Nhưng nếu bạn làm:
+from config import DEBUG
+DEBUG = False  # ❌ Chỉ gán local trong main.py, không đổi config.DEBUG!
+# Đây là bẫy "import by value vs by reference" — thực chất là rebinding name. 
+
+...
+# exec() và eval() – phạm vi động (dynamic scope)
+#  exec/eval phá vỡ LEGB thông thường → dễ gây lỗi bảo mật và debug khó. 
+x = 10
+exec("print(x)")  # → 10 ✅
+
+def f():
+    x = 20
+    exec("print(x)")  # → 20 ✅
+
+f()
+
+...
+x = "global"
+
+class A:
+    x = "class"
+    def method(self):
+        return x  # → "global", KHÔNG phải "class"!
+
+print(A().method())  # "global" ✅
+#  Class scope – không phải là enclosing scope!
+
+# ❗ Phạm vi lớp (class scope) KHÔNG được tìm trong LEGB khi ở trong method!
+# → Method chỉ thấy: Local → Enclosing (nếu có closure) → Global → Built-in. 
+class A:
+    x = "A"
+
+    def get_via_self(self):
+        return self.x
+
+    def get_via_class(self):
+        return self.__class__.x
+
+    def get_via_A(self):
+        return A.x
+
+class B(A):
+    x = "B"
+
+b = B()
+
+print(b.get_via_self())     # → "B" ✅ (kế thừa + override)
+print(b.get_via_class())    # → "B" ✅ (lấy từ lớp thực tế của b)
+print(b.get_via_A())        # → "A" ❌ (cứng vào A, không theo subclass!)

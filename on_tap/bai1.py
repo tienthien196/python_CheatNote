@@ -770,3 +770,167 @@ for i in range(1000):
 
 # hoặc
 result.extend(range(1000))
+
+"""
+## 🔸 1. Sao chép nông (Shallow Copy) vs Sao chép sâu (Deep Copy)
+
+### 🎯 Vấn đề cốt lõi:
+Python **không sao chép object khi gán**, mà **tạo thêm tham chiếu** → thay đổi object gốc → object "sao chép" cũng thay đổi.
+
+### 🔸 Shallow Copy (`copy.copy()` hoặc `.copy()`, `[:]`)
+- **Sao chép cấp 1**: tạo **object mới**, nhưng **các phần tử bên trong vẫn là tham chiếu đến object cũ**.
+- **Chỉ an toàn với dữ liệu flat** (không lồng).
+
+#### ✅ Ví dụ minh họa:
+```python
+import copy
+
+# --- Trường hợp 1: Danh sách phẳng (flat list) ---
+a = [1, 2, 3]
+b = a.copy()        # shallow copy
+b[0] = 999
+print(a)  # [1, 2, 3] → không bị ảnh hưởng → OK!
+
+# --- Trường hợp 2: Danh sách lồng (nested list) ---
+a = [[1, 2], [3, 4]]
+b = a.copy()        # shallow copy → BẪY!
+b[0][0] = 999
+print(a)  # [[999, 2], [3, 4]] → BỊ ẢNH HƯỞNG! 
+"""
+
+...# từ khoá del 
+a = [1, 2, 3]
+b = a          # b và a cùng trỏ đến [1,2,3]
+del a          # xóa tên 'a', nhưng object [1,2,3] vẫn còn vì 'b' đang trỏ
+print(b)       # [1, 2, 3] → vẫn in được!
+# Xóa tên, không xóa đối tượng
+
+...# Xóa phần tử trong vùng chứa
+my_list = [10, 20, 30]
+del my_list[1]     # xóa phần tử ở index 1
+print(my_list)     # [10, 30]
+
+my_dict = {'x': 1, 'y': 2}
+del my_dict['x']   # xóa key 'x'
+print(my_dict)     # {'y': 2}
+
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+#  1. Các nâng cấp tích hợp của loại dữ liệu
+# frozenset: phiên bản bất biến của , có thể dùng làm khóa trong dict.set
+# bytearray: phiên bản có thể thay đổi của .bytes
+# memoryview: được phép truy cập bộ nhớ của đối tượng mà không được sao chép → hiệu suất cao.
+# range: is Immutable Sequence , Not List , and Lazy (chỉ sinh giá trị khi cần).
+# namedtuple(từ ): tuple có trường tên → dễ đọc, hiệu quả.collections
+# deque: hàng đợi hai đầu, tối ưu cho chèn/xóa ở 2 đầu.
+# Counter, ,defaultdictOrderedDict : các biến có thể hữu ích.
+
+#  2. Iterable, Iterator, Generator – Chi tiết sâu
+# Sự khác biệt giữa vàiterableiterator :
+# list, , → có thể lặp lại (có )strdict__iter__
+# iter(list)→ iterator (có )__next__
+# Hàm tạo ( ) so với biểu thức tạo ( )yield(x for x in ...)
+# yield from: trình tạo đại biểu
+# send(), ,throw()close() : bộ tạo điều khiển
+# Đã hết iterator : dùng xong một lần là hết → không thể dùng lại được.
+
+#  3. Trình quản lý bối cảnh ( ) – Tự tạowith
+# Sử dụng , để hỗ trợ lớp__enter____exit__with
+# Hoặc dùng để tạo từ trình tạo@contextlib.contextmanager
+# from contextlib import contextmanager
+
+# @contextmanager
+# def timer():
+#     start = time.time()
+#     yield
+#     print(f"Time: {time.time() - start}")
+
+
+#  4. Decorator – Nâng cao
+# Decorator có tham số:@decorator(arg)
+# Trình trang trí lớp
+# functools.wrapsđể chứa siêu dữ liệu gốc của hàm
+# Các trình trang trí tích hợp: , ,@property@staticmethod@classmethod
+
+# 5. Miêu tả & , ,__get____set____delete__
+# Cơ chế đằng sau@property
+# Cho phép kiểm soát quyền truy cập thuộc tính
+
+# class Positive:
+#     def __set_name__(self, owner, name):
+#         self.name = name
+#     def __get__(self, obj, objtype=None):
+#         return obj.__dict__[self.name]
+#     def __set__(self, obj, value):
+#         if value <= 0:
+#             raise ValueError("Must be positive")
+#         obj.__dict__[self.name] = value
+
+#  6. Metaclass ( , của lớp)__new____init__
+# "Class of class" → use để tùy chỉnh cách tạo lớp
+# Ít dùng, nhưng rất mạnh (Django, SQLAlchemy use)
+
+# class Meta(type):
+#     def __new__(cls, name, bases, dct):
+#         dct['auto_added'] = True
+#         return super().__new__(cls, name, bases, dct)
+
+# class MyClass(metaclass=Meta):
+#     pass
+
+# 🔹 7. Không đồng bộ / Chờ đợi (asyncio)
+# Lập trình bất đồng bộ: , , ,async defawaitasync forasync with
+# Vòng lặp sự kiện, coroutine, nhiệm vụ, tương lai
+# Không phải đa luồng, mà là đồng thời thông qua đa nhiệm hợp tác
+
+# 🔹 8. Gợi ý gõ – Nâng cao
+# Union, , , ,OptionalLiteralTypedDictProtocol
+# Generic: , → thay bằng (Python 3.9+)List[int]Dict[str, float]list[int]
+# TypeVar, ,Callable@overload
+# Dùng để kiểm tra tĩnhmypy
+
+#  9. Module & Package – Nâng cao
+# __name__ == "__main__": check script run direct
+# __all__: kiểm soátfrom module import *
+# Nhập khẩu tương đối:from . import utils
+# Gói không gian tên (không cần thiết )__init__.py
+
+
+# 🔹 10. Hiệu suất & Tối ưu hóa
+# __slots__: giảm bộ nhớ cho phiên bản
+# tránh cho string → dùng+join()
+# Tránh trong vòng lặp → sử dụng hoặc hiểu danh sáchlist + listextend()
+# dismodule: xem bytecode
+# timeit: performance đo chính xác
+# 🔹 11. Công cụ gỡ lỗi & xem xét nội tâm
+# inspectmodule: lấy hàm thông tin, lớp, khung
+# pprint: in đẹp dữ liệu cấu trúc
+# pdb: trình gỡ lỗi tích hợp
+# vars(), , ,dir()getattr()hasattr()
+# 🔹 12. GIL (Khóa thông dịch toàn cục)
+# Tại sao Python không thực hiện tối đa luồng CPU-bound?
+# Khi nào thì nên sử dụng ?multiprocessingthreading
+
+# 13. Lớp dữ liệu (Python 3.7 trở lên)
+# Thay thế , , bằng trang trí__init____repr____eq__
+# from dataclasses import dataclass
+
+# @dataclass
+# class Point:
+#     x: int
+#     y: int
+
+#  14. So khớp mẫu cấu trúc (match-case – Python 3.10+)
+# match value:
+#     case 0:
+#         print("Zero")
+#     case x if x > 0:
+#         print("Positive")
+#     case _:
+#         print("Other")
+    
+
+# 🔹 15. Bảo mật & Thực hành tốt nhất
+# Tránh , , với dữ liệu không được tin cậyeval()exec()pickle
+# Sử dụng thay thế mật khẩu/mã thông báosecretsrandom
+# Môi trường ảo ( , , )venvpipenvpoetry

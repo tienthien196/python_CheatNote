@@ -1,32 +1,21 @@
-import NGLxAPIClient
-# Thông tin từ request bạn cung cấp
-client = NGLxAPIClient(
-    user_id="691faf92-92de-45f0-b84d-ae8dad27ed53",
-    content_id="d32ef972-fdba-4551-aebb-dc3f18f260e5",
-    registration_id="6ff24efb-834d-416c-9da3-fceee914d88d",
-    session_cookie="_unity_session=a629be948ae4f6351e864ffed27c93a0"
-)
+# config.py
+DEBUG = False
 
-# 1. Lấy bookmark
-bookmark = client.get_bookmark()
-print("Bookmark:", bookmark)
+# main.py
+# import config
+# config.DEBUG = False  # ✅ OK
 
-# 2. Lưu bookmark mới
-client.save_bookmark({"page": 10, "time": 123.45})
+# Nhưng nếu bạn làm:
+from config import DEBUG
+# DEBUG = False  # ❌ Chỉ gán local trong main.py, không đổi config.DEBUG!
+# Đây là bẫy "import by value vs by reference" — thực chất là rebinding name. 
+print(DEBUG)
+# Module object
+# Utils extendsion
+# namespace >>Built-in >>Global (module-level) >>Local (function-level) >>Enclosing (closure)
+# Dùng import module cho cấu hình, trạng thái, cần tính rõ ràng thì dùng object thay from, tránh xuung đột với namespace
+# Dùng from module import func cho hàm/hằng chỉ đọc, dùng trực tiếp  ,
+# import bn.tt
+from bn import tt as i
 
-# 3. Lấy suspend_data
-suspend = client.get_suspend_data()
-print("Suspend data:", suspend)
-
-# 4. Lưu trạng thái tạm
-client.save_suspend_data({
-    "currentSlide": "quiz_3",
-    "answers": {"q1": "A"},
-    "visited": [1,2,3]
-})
-
-# 5. Gửi sự kiện "started"
-client.send_started()
-
-# 6. Gửi hoàn thành với điểm
-client.send_completed(success=True, score=0.85)
+i.tt()

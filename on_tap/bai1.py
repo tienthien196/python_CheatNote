@@ -493,6 +493,19 @@ config.DEBUG = False  # ✅ OK
 from config import DEBUG
 DEBUG = False  # ❌ Chỉ gán local trong main.py, không đổi config.DEBUG!
 # Đây là bẫy "import by value vs by reference" — thực chất là rebinding name. 
+# namespace >>Built-in >>Global (module-level) >>Local (function-level) >>Enclosing (closure)
+# Module object>> tạo 1 object module trong namespace
+# Dùng import module cho cấu hình, trạng thái, cần tính rõ ràng thì dùng object thay from, tránh xuung đột với namespace
+# Utils extendsion>>
+# Dùng from module import func cho hàm/hằng chỉ đọc, dùng trực tiếp  ,
+
+# nếu dùng gói package >> thì phải cần __init__ >> phân chia hệ thỗng rõ ràng 
+# mypackage/__init__.py
+# from .core import Engine
+# from .utils import load_config, save_output
+# from .exceptions import MyError
+
+# __all__ = ['Engine', 'load_config', 'save_output', 'MyError']
 
 ...
 # exec() và eval() – phạm vi động (dynamic scope)

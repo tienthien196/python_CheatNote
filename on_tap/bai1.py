@@ -86,7 +86,7 @@ c1 = "" or [] or [1]      # → [1] (vì "" và [] đều falsy)
 # return true đầu tiên  or flase cuối cùng nếu ko có true nào
 
 c2 = [1,2] and "hello" # >hello
-d1 = None and [] # []
+d1 = None and [] # None
 # print(bool([1,2] or "hello"))
 # input_name  = input("can")
 # name = input_name or "Anonymous"
@@ -390,6 +390,58 @@ print(my_list)  # [10] ← không đổi!
 
 
 # BẪY TRONG try...except
+
+try: ...
+except ZeroDivisionError: ... # 5 / 0  # ZeroDivisionError
+except IndentationError as e: ... #  Sai dòng viết (dùng tab và dấu cách, thiếu dấu lót sau , vv):
+except NameError as e : ... #  Sử dụng biến chưa được xác định 
+except AttributeError as e :
+    ... # Truy cập thuộc tính/phương thức không tồn tại(cả list, dict)
+    x = []
+    x.appendd(1)  # AttributeError: 'list' object has no attribute 'appendd'
+except TypeError as e  :
+    ... # Thao tác không hợp lệ với kiểu dữ liệu
+    "5" + 3        # TypeError
+    len(5)         # TypeError
+    my_list[None]  # TypeError: list indices must be integers
+except ValueError as e:
+    ... # Hợp lệ có giá trị về kiểu nhưng không hợp lệ về nghĩa.
+    int("hello")     # ValueError
+    list.index(99)   # ValueError: 99 is not in list
+except IndexError as e: 
+    ... # Truy cập chỉ số ngoài phạm vi.
+    [1, 2][5]  # IndexError
+except KeyError as e:
+    # Key truy cập không tồn tại trong dict
+    d = {'a': 1}
+    d['b']  # KeyError
+    # cách tránh 
+    d.get('key', "") # dùng default
+    if 'key' in d: ... # dùng in 
+except UnboundLocalError:
+    x = 0
+    def f():
+        x += 1  # UnboundLocalError
+    # dùng global
+
+except RecursionError: ... # Đệ quy quá sâu (vượt giới hạn ~1000).sys.getrecursionlimit()
+# khi dùng nhiều ngoại lệ phải dùng tuple 
+except (ModuleNotFoundError, ImportError) as e: ...#  Mô-đun không tồn tại hoặc sai đường dẫn. as e: ...#  Mô-đun không tồn tại hoặc sai đường dẫn.
+except (FileNotFoundError, OSError): ...#  File không tồn tại, quyền truy cập, disk full, vv
+except (UnicodeError, UnicodeDecodeError, UnicodeEncodeError):... # Đọc/ghi file với mã hóa sai.
+except StopIteration: ... # Gọi trên iterator đã hết.next()
+except RuntimeError: ... #  Lỗi logic nghiêm trọng (ví dụ: chu trình nhập, trình tạo được sửa khi đang chạy).
+
+# ----🛡️ Nguyên tắc vàng để tránh ngoại lệ :----
+"""
+    EAFP "Dễ xin tha thứ hơn là xin phép" → Dùng khi lỗi nguy hiểm ra try/except
+    LBYL "Look Before You Leap" → Kiểm tra điều k
+    Xác thực đầu vào -> Luôn kiểm tra đầu vào từ người dùng/tệp/mạng
+    Dùng gợi ý kiểu + mypy -> Bắt lỗi ngay từ dev time
+    Không bắt trốngexcept: -> Luôn có thể chỉ định cụ thể loại ngoại lệ
+
+"""
+
 def risky_code():...
 # ❌ RẤT NGUY HIỂM
 try:
@@ -552,3 +604,169 @@ b = B()
 print(b.get_via_self())     # → "B" ✅ (kế thừa + override)
 print(b.get_via_class())    # → "B" ✅ (lấy từ lớp thực tế của b)
 print(b.get_via_A())        # → "A" ❌ (cứng vào A, không theo subclass!)
+
+
+class A:
+    def method(self):
+        print("A")
+
+class B(A):
+    def method(self):
+        print("B")
+        super().method()
+
+class C(A):
+    def method(self):
+        print("C")
+        super().method()
+
+class D(B, C):
+    def method(self):
+        print("D")
+        super().method()
+
+D().method()
+# Output: D → B → C → A (đúng nhờ MRO)
+# ❌ Sai cách gọi → bỏ phương thức chasuper()
+
+...
+class MyInt(int): pass
+x = MyInt(5)
+print(type(x) == int)      # False ❌
+print(isinstance(x, int))  # True ✅
+
+...
+class MyClass:
+    def __init__(self, items=[]):  # ❌ Mutable default!
+        self.items = items
+
+# bẫy với FIle 
+# 🔥 2. Bẫy chuỗi và mã hóa
+# Trên Windows, nếu file không có encoding, open() dùng encoding hệ thống
+with open('file.txt') as f:  # ❌ Nguy hiểm!
+    data = f.read()
+#sữa  >>
+with open('file.txt', encoding='utf-8') as f:
+    ...
+
+...
+# ❌ Trộn lẫn đối tượng và chuỗiPath RCE
+from pathlib import Path
+p = Path("data") / "file.txt"
+# ❌
+with open(p + ".bak") as f:  # Lỗi! Không thể cộng Path + str bằng `+`
+    ...
+# ✅ Sử dụng hoặc ép dây:/
+with open(p.with_suffix('.txt.bak')) as f: ...
+
+...
+# ⚠️ NEVER DO THIS WITH UNTRUSTED DATA
+# data = pickle.loads(user_input)  # RCE risk!
+
+
+
+
+d = {[1,2]: "value"}  # ❌ TypeError: unhashable type: 'list'
+print(d)
+
+# 5. Bị bẫy và iterator đã cạn kiệt
+nums = (x for x in range(3))
+print(list(nums))  # [0, 1, 2]
+print(list(nums))  # [] ← generator đã "hết"
+
+
+d = {[1, 2]: "value"}      # ❌ list không hash được
+d = {{1, 2}: "value"}      # ❌ set không hash được
+d = {{"a": 1}: "value"}    # ❌ dict không hash được
+t = ([1, 2],)  # tuple chứa list → vẫn unhashable!
+d = {t: "x"}   # ❌ TypeError!
+# ✅ Chỉ sử dụng loại khóa làm việc bất biến : int , flaot , str
+# sữa  >>
+d = {(1, 2): "value"}      # ✅ tuple → OK
+d = {frozenset([1, 2]): "v"}  # ✅ frozenset → OK
+
+...
+d = {'a': 1}
+print(d['b'])  # ❌ KeyError
+# ❌ Key truy cập không tồn tại →KeyError
+# Cách 1: Dùng .get()
+value = d.get('b', 'default')
+
+# Cách 2: Kiểm tra trước
+if 'b' in d:
+    print(d['b'])
+
+# Cách 3: Dùng defaultdict
+from collections import defaultdict
+d = defaultdict(lambda: 'default')
+
+...
+# ❌ Edit dict khi đang lặp → (trong một số trường hợp)RuntimeError
+d = {'a': 1, 'b': 2}
+for k in d:
+    if k == 'a':
+        del d[k]  # ❌ RuntimeError: dictionary changed size during iteration
+#sữa  >> 
+# Lặp trên bản sao key
+for k in list(d.keys()):
+    if k == 'a':
+        del d[k]
+
+# Hoặc dùng dict comprehension để tạo mới
+d = {k: v for k, v in d.items() if k != 'a'}
+
+...
+# ❌ Đối số mặc định có thể thay đổi trong dict → hành động bất ngờ
+def add(key, value, target={}):  # ❌ dict mutable default!
+    target[key] = value
+    return target
+
+print(add('a', 1))  # {'a': 1}
+print(add('b', 2))  # {'a': 1, 'b': 2} ← GÌ?!
+# sữa  >>
+def add(key, value, target=None):
+    if target is None:
+        target = {}
+    target[key] = value
+    return target
+
+...
+# ❌ So sánh dict bằng → luôn (trừ khi cùng đối tượng)isFalse
+d1 = {'a': 1}
+d2 = {'a': 1}
+print(d1 is d2)  # False ✅ (đúng logic)
+print(d1 == d2)  # True ✅
+# Không sai, nhưng đừng dùng để so sánh nội dung dict .is
+
+
+a = b = []  # ❌ cùng trỏ 1 list!
+a.append(1)
+print(b)  # [1] ← bất ngờ!
+
+# sữa >>
+a = []
+b = []
+# hoặc
+a, b = [], []
+
+...
+a = [[1, 2], [3, 4]]
+b = a.copy()        # hoặc b = a[:]
+b[0][0] = 999
+print(a)  # [[999, 2], [3, 4]] ← bị ảnh hưởng!
+# ❌ Sao chép danh sách nông (bản sao nông) với danh sách lồng nhau
+import copy
+b = copy.deepcopy(a)
+
+...
+result = []
+for i in range(1000):
+    result = result + [i]  # ❌ Tạo list mới mỗi lần!
+# ❌ Sử dụng để kết nối danh sách trong vòng lặp → O(n²) → chậm+
+#sữa >> 
+result = []
+for i in range(1000):
+    result.append(i)  # ✅ O(1) amortized
+
+# hoặc
+result.extend(range(1000))

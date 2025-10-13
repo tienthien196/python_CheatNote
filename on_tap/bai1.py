@@ -1,5 +1,20 @@
+#---Binary---nhị phân ----
+print(0b0101)
+print(0B1111)
+#---Octal ----bát phân ----
+print(0o7777)
+print(0O4567)
 
+# ---hexadecimal--thập lục phân
+print(0x0000)
+print(0XFFFF)
 
+#---Decimal ----hệ cơ số 10 
+x = 255
+print(x)           # 255 (thập phân)
+print(bin(x))      # 0b11111111
+print(oct(x))      # 0o377
+print(hex(x))      # 0xff
 
 
 
@@ -16,8 +31,6 @@
 # print(help(input))
 
 
-
-### NGÀY 2
 
 
 #---toán tử so sánh --- >> True / False
@@ -111,7 +124,7 @@
 # Bitwise (<<, >>, &, ^, |) → nằm giữa số học và so sánh.
 # So sánh (==, !=, <, <=,  in, is, is not , not in) 
 # Logic (not → and → or) → ưu tiên thấp nhất (trừ gán).
-
+x = 9; y= 9
 # --- bẫy --->> CHÚ Ý DÁU NGOẶC KHI DÙNG TOÁN TỬ  
 True == True and False # (True == True) and False 
 5 & 3 == 1 # 5 & (3 == 1) Sai >> phải sữa (5 & 3) == 1  # → True

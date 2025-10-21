@@ -1,0 +1,1 @@
+dirty_string = "  \t  hELLo\tWorLD! 123 ⅕ ² ๓ \n\n  PyThOn\t\tIS AwEsOmE!  \n  "

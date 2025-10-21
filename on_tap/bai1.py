@@ -384,7 +384,7 @@ except (FileNotFoundError, OSError): ...#  File không tồn tại, quyền truy
 except (UnicodeError, UnicodeDecodeError, UnicodeEncodeError):... # Đọc/ghi file với mã hóa sai.
 except StopIteration: ... # Gọi trên iterator đã hết.next()
 except RuntimeError: ... #  Lỗi logic nghiêm trọng (ví dụ: chu trình nhập, trình tạo được sửa khi đang chạy).
-
+except: KeyboardInterrupt: ...
 # ----🛡️ Nguyên tắc vàng để tránh ngoại lệ :----
 """
     EAFP "Dễ xin tha thứ hơn là xin phép" → Dùng khi lỗi nguy hiểm ra try/except
@@ -433,8 +433,9 @@ finally:
 def f():
     try:
         return "from try"
-    finally:
-        return "from finally"  # ✅ Ghi đè!
+    except:...
+    # finally:
+    #     return "from finally"  # ✅ Ghi đè!
 
 print(f())  # "from finally"
 # → Cẩn thận khi return trong finally! 

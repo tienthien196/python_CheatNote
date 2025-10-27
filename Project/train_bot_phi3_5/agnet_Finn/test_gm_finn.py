@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 
 # === Cấu hình ===
 BASE_MODEL = "Qwen/Qwen3-1.7B"
-LORA_ADAPTER = r"E:\1_test_Src\src\python\python_cheat\gm_finn_qwen3_lora"  # Thư mục bạn lưu sau fine-tune
+LORA_ADAPTER = r"E:\1_test_Src\src\python\python_cheat\Project\train_bot_phi3_5\agnet_Finn\fine_tuning"  # Thư mục bạn lưu sau fine-tune
 
 # === Tải tokenizer ===
 print("Đang tải tokenizer...")

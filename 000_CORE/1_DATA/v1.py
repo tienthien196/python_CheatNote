@@ -99,7 +99,7 @@ print("A".casefold() == "a")
 "line1\nline2\r\nline3".splitlines()  # → ['line1', 'line2', 'line3']
 "abc\n".splitlines()                # → ['abc']  # không có dòng rỗng cuối
 
-# partition(sep): Tách thành (trước, sep, sau) — chỉ tách 1 lần. Nếu không tìm thấy → (s, "", "")
+# partition(sep): Tách thành (trước, sep, sau) — chỉ tách 1 lần. Nếu không tìm thấy → (s, "", "") chẻ string
 "hello world".partition(" ")        # → ('hello', ' ', 'world')
 "notfound".partition("x")           # → ('notfound', '', '')
 

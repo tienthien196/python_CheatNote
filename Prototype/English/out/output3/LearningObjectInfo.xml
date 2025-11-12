@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><LearningObjectInfo>
+    <UID>cen-prod_568669</UID>
+    <uuid>98b99787-18fd-4c99-a9c7-c97ef2907c8b</uuid>
+    <ID>568669</ID>
+    <timestamp>2024-11-10T04:14Z</timestamp>
+    <mediaURL/>
+    <name>life 2e_bre_olp_3pi_u01a_06</name>
+    <screens>
+        <screen>
+            <uuid>b9ee59e2-3333-438b-9673-e83b8c66d605</uuid>
+            <name>cat2104415.xml</name>
+            <metadata>
+                <lom>
+                    <group name="Adaptive Courses" order="1"/>
+                    <group name="Competencies" order="2"/>
+                    <group name="General" order="3">
+                        <item description="Unit Number" order="1" title="Unit Number">
+                            <value description="Unit 1" key="genunmbr00001" order="35"/>
+                        </item>
+                    </group>
+                    <group name="Depth of Knowledge Levels" order="4"/>
+                    <group name="Course Objective Hierarchy (COH)" order="5">
+                        <item description="Skill" order="1" title="Skill">
+                            <value description="Grammar" key="cohskl00001" order="1"/>
+                        </item>
+                        <item description="Subskill" order="2" title="Subskill">
+                            <value description="Present Verb Forms" key="cohsub00015" order="15"/>
+                        </item>
+                        <item description="Learning Objective" order="3" title="Learning Objective">
+                            <value description="Use present simple" key="cohobj00528" order="530"/>
+                        </item>
+                    </group>
+                    <group name="CASAS Competencies" order="6"/>
+                    <group name="CASAS Reading" order="7"/>
+                    <group name="CCR Standards" order="8"/>
+                    <group name="Common Core State Standards" order="9"/>
+                    <group name="CEFR Descriptors" order="10">
+                        <item description="CEFR Level" order="1" title="CEFR Level">
+                            <value description="B1+" key="cefrlvl00005" order="5"/>
+                        </item>
+                        <item description="CEFR Descriptor Scheme" order="3" title="CEFR Descriptor Scheme">
+                            <value description="Communicative language competences" key="cefrdscrscm00002" order="2"/>
+                        </item>
+                        <item description="CEFR Scale" order="4" title="CEFR Scale">
+                            <value description="Grammatical accuracy" key="cefrscl00030" order="30"/>
+                        </item>
+                        <item description="CEFR Descriptor" order="5" title="CEFR Descriptor">
+                            <value description="Communicates with reasonable accuracy in familiar contexts; generally good control, though with noticeable mother-tongue influence. Errors occur, but it is clear what they are trying to express." key="cefrdscr01148" order="1148"/>
+                        </item>
+                    </group>
+                    <group name="ELP Standards" order="11"/>
+                </lom>
+            </metadata>
+            <helpText/>
+            <maximumscore>8</maximumscore>
+            <activity-estimated-duration>56.64</activity-estimated-duration>
+            <resources/>
+            <answers/>
+            <activityTypeName>SDY07 FIB Type In</activityTypeName>
+            <activityTypeIdentifier>Input:Completion:Text gap</activityTypeIdentifier>
+            <options>&lt;options data-author="options-v2"&gt;&lt;option id="368"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="441"&gt;&lt;key&gt;pause&lt;/key&gt;&lt;/option&gt;&lt;option id="525"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="051"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="512"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="027"&gt;&lt;key&gt;number&lt;/key&gt;&lt;/option&gt;&lt;option id="028"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="319"&gt;&lt;key&gt;{"items":[]}&lt;/key&gt;&lt;/option&gt;&lt;option id="345"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="545"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="023"&gt;&lt;key&gt;true&lt;/key&gt;&lt;/option&gt;&lt;option id="029"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="025"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="054"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="050"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="313"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="046"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="449"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="312"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="450"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="336"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="318"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="570"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="390"&gt;&lt;key&gt;&lt;/key&gt;&lt;/option&gt;&lt;option id="045"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="561"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="401"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="323"&gt;&lt;key&gt;true&lt;/key&gt;&lt;/option&gt;&lt;option id="462"&gt;&lt;key&gt;no&lt;/key&gt;&lt;/option&gt;&lt;option id="463"&gt;&lt;key&gt;no&lt;/key&gt;&lt;/option&gt;&lt;option id="508"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="425"&gt;&lt;key&gt;dontshow&lt;/key&gt;&lt;/option&gt;&lt;option id="403"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="113"&gt;&lt;key&gt;samelongest&lt;/key&gt;&lt;/option&gt;&lt;option id="324"&gt;&lt;key&gt;true&lt;/key&gt;&lt;/option&gt;&lt;option id="480"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="451"&gt;&lt;key&gt;text&lt;/key&gt;&lt;/option&gt;&lt;option id="402"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="111"&gt;&lt;key&gt;none&lt;/key&gt;&lt;/option&gt;&lt;option id="406"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="326"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="398"&gt;&lt;key&gt;allow&lt;/key&gt;&lt;/option&gt;&lt;option id="479"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="361"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="394"&gt;&lt;key&gt;activity_setting,activity_setting,activity_setting,activity_setting,activity_setting,activity_setting,activity_setting,activity_setting&lt;/key&gt;&lt;/option&gt;&lt;/options&gt;</options>
+        </screen>
+    </screens>
+    <metadata>
+        <lom>
+            <group name="Adaptive Courses" order="1"/>
+            <group name="Competencies" order="2"/>
+            <group name="General" order="3"/>
+            <group name="Depth of Knowledge Levels" order="4"/>
+            <group name="Course Objective Hierarchy (COH)" order="5"/>
+            <group name="CASAS Competencies" order="6"/>
+            <group name="CASAS Reading" order="7"/>
+            <group name="CCR Standards" order="8"/>
+            <group name="Common Core State Standards" order="9"/>
+            <group name="CEFR Descriptors" order="10"/>
+            <group name="ELP Standards" order="11"/>
+        </lom>
+    </metadata>
+    <LOOptions>&lt;options data-author="options-v2"&gt;&lt;option id="433"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="051"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="341"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="311"&gt;&lt;key&gt;beforeSubmitted&lt;/key&gt;&lt;/option&gt;&lt;option id="512"&gt;&lt;key&gt;marking_only&lt;/key&gt;&lt;/option&gt;&lt;option id="373"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="047"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="379"&gt;&lt;key&gt;&lt;/key&gt;&lt;value&gt;{"items":[{"label":""},{"label":"time_left"},{"label":"off"},{"label":"force_submit"},{"label":""},{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}],"selection":""}&lt;/value&gt;&lt;/option&gt;&lt;option id="335"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="342"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="375"&gt;&lt;key&gt;{"items":[]}&lt;/key&gt;&lt;/option&gt;&lt;option id="432"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="545"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="487"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="025"&gt;&lt;key&gt;true&lt;/key&gt;&lt;/option&gt;&lt;option id="050"&gt;&lt;key&gt;auto&lt;/key&gt;&lt;/option&gt;&lt;option id="313"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="521"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="419"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="046"&gt;&lt;key&gt;1_point_action&lt;/key&gt;&lt;/option&gt;&lt;option id="449"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="312"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="450"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="336"&gt;&lt;key&gt;always&lt;/key&gt;&lt;/option&gt;&lt;option id="522"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="334"&gt;&lt;key&gt;always&lt;/key&gt;&lt;value&gt;{&amp;amp;quot;items&amp;amp;quot;:[{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;}],&amp;amp;quot;selection&amp;amp;quot;:&amp;amp;quot;always&amp;amp;quot;}&lt;/value&gt;&lt;/option&gt;&lt;option id="570"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="315"&gt;&lt;key&gt;1&lt;/key&gt;&lt;/option&gt;&lt;option id="396"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="533"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="045"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="380"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="393"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;option id="418"&gt;&lt;key&gt;[]&lt;/key&gt;&lt;/option&gt;&lt;option id="528"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="541"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="550"&gt;&lt;key&gt;200&lt;/key&gt;&lt;/option&gt;&lt;option id="560"&gt;&lt;key&gt;["2","9","4","5","3","6"]&lt;/key&gt;&lt;/option&gt;&lt;option id="581"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;option id="582"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;option id="583"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;option id="584"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;/options&gt;</LOOptions>
+    <skin>NGL_SDY</skin>
+    <mode>Normal</mode>
+    <title>1a | Grammar 1 | Exercise 4</title>
+    <assetCDNURL>media</assetCDNURL>
+    <type>Standard</type>
+    <toolbeltServer>//avallain-toolbelt-prod.avallain.net</toolbeltServer>
+    <geoGebra>//author-engine-production.avallain.net/geogebra/v5-0-672-0/HTML5/5.0/web/</geoGebra>
+    <mathJAX>//author-engine-production.avallain.net/mathjax/3.2.2</mathJAX>
+    <tts>
+        <voice>female-1</voice>
+        <service>https://tts.avallain.net/sync_converter</service>
+        <lang/>
+    </tts>
+    <lnrCDNURL>https://lnr-runtime-assets.s3-website-eu-west-1.amazonaws.com</lnrCDNURL>
+    <ckeditorRelative>false</ckeditorRelative>
+    <lang>en</lang>
+    <lmsApis>TinCan</lmsApis>
+    <maximumscore>8</maximumscore>
+    <engine>
+        <version>buckminster-48.0.2-3-g9bf942da2</version>
+        <downloadURL>https://author-engine-production.avallain.net/buckminster-48.0.2-3-g9bf942da2/engine.zip</downloadURL>
+        <root>https://author-engine-production.avallain.net/buckminster-48.0.2-3-g9bf942da2/</root>
+    </engine>
+    <designPack>
+        <version>ngl-secondary-2.4.3</version>
+        <downloadURL>//cen-author-prod-assets.avallain.net/designpack/NGL_SDY/7472d41a652d64a82093330e5eb8e2eb</downloadURL>
+        <root>//cen-author-prod-assets.avallain.net/designpack/NGL_SDY/7472d41a652d64a82093330e5eb8e2eb/</root>
+        <type>git</type>
+    </designPack>
+    <publishingType>
+        <class__>com.avallain.cat.view.PublishingType.Unity</class__>
+        <name>CEN Prod</name>
+        <configuration>{"online":"true", "assets": {
+           "export": "true",
+           "videoTypes": "mp4",
+           "audioTypes": "mp3"
+       }
+}</configuration>
+    </publishingType>
+    <lo-estimated-duration>56.64</lo-estimated-duration>
+    <resources/>
+    <dependencies/>
+    <profiles>
+        <profile>
+            <id>14</id>
+            <name>Secondary Assignment Settings</name>
+            <defaultProfile>false</defaultProfile>
+            <options>&lt;options data-author="options-v2"&gt;&lt;option id="311"&gt;&lt;key&gt;always&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="543"&gt;&lt;key&gt;off&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="521"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="312"&gt;&lt;key&gt;off&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="556"&gt;&lt;key&gt;off&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="334"&gt;&lt;key&gt;always&lt;/key&gt;&lt;value&gt;{&amp;amp;quot;items&amp;amp;quot;:[{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;}],&amp;amp;quot;selection&amp;amp;quot;:&amp;amp;quot;always&amp;amp;quot;}&lt;/value&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="315"&gt;&lt;key&gt;1&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="045"&gt;&lt;key&gt;false&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;/options&gt;</options>
+            <updatedAt>2024-08-07 13:57:35</updatedAt>
+            <uuid>c74d5072-7156-488d-ad39-caa465e08d05</uuid>
+        </profile>
+    </profiles>
+    <assets/>
+    <pages/>
+    <solution-pages/>
+    <audio>mp3</audio>
+    <video>mp4</video>
+    <acuda/>
+    <external-services-required>
+        <item>tincan</item>
+    </external-services-required>
+    <thumbnails/>
+</LearningObjectInfo>

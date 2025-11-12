@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?><LearningObjectInfo>
+    <UID>cen-prod_569659</UID>
+    <uuid>799320cb-f05c-4338-abcb-7e1f4cc9a100</uuid>
+    <ID>569659</ID>
+    <timestamp>2025-02-23T03:54Z</timestamp>
+    <mediaURL/>
+    <name>life 2e_bre_olp_3pi_u02a_04</name>
+    <screens>
+        <screen>
+            <uuid>256605c2-8a26-403b-ac97-59725fa47005</uuid>
+            <name>cat2107825.xml</name>
+            <metadata>
+                <lom>
+                    <group name="Adaptive Courses" order="1"/>
+                    <group name="Competencies" order="2"/>
+                    <group name="General" order="3">
+                        <item description="Unit Number" order="1" title="Unit Number">
+                            <value description="Unit 2" key="genunmbr00002" order="54"/>
+                        </item>
+                    </group>
+                    <group name="Depth of Knowledge Levels" order="4"/>
+                    <group name="Course Objective Hierarchy (COH)" order="5">
+                        <item description="Skill" order="1" title="Skill">
+                            <value description="Listening" key="cohskl00002" order="2"/>
+                        </item>
+                        <item description="Subskill" order="2" title="Subskill">
+                            <value description="Critical Thinking in Listening" key="cohsub00023" order="23"/>
+                        </item>
+                        <item description="Learning Objective" order="3" title="Learning Objective">
+                            <value description="Understand main ideas when listening" key="cohobj00402" order="397"/>
+                        </item>
+                    </group>
+                    <group name="CASAS Competencies" order="6"/>
+                    <group name="CASAS Reading" order="7"/>
+                    <group name="CCR Standards" order="8"/>
+                    <group name="Common Core State Standards" order="9"/>
+                    <group name="CEFR Descriptors" order="10">
+                        <item description="CEFR Level" order="1" title="CEFR Level">
+                            <value description="B1+" key="cefrlvl00005" order="5"/>
+                        </item>
+                        <item description="CEFR Mode of Communication" order="2" title="CEFR Mode of Communication">
+                            <value description="Reception" key="cefrmoc00004" order="4"/>
+                        </item>
+                        <item description="CEFR Descriptor Scheme" order="3" title="CEFR Descriptor Scheme">
+                            <value description="Communicative language activities" key="cefrdscrscm00001" order="1"/>
+                        </item>
+                        <item description="CEFR Scale" order="4" title="CEFR Scale">
+                            <value description="Understanding audio (or signed) media and recordings" key="cefrscl00079" order="79"/>
+                        </item>
+                        <item description="CEFR Descriptor" order="5" title="CEFR Descriptor">
+                            <value description="Can understand the information content of the majority of recorded or broadcast material on topics of personal interest delivered in clear standard language." key="cefrdscr01040" order="1040"/>
+                        </item>
+                    </group>
+                    <group name="ELP Standards" order="11"/>
+                </lom>
+            </metadata>
+            <helpText/>
+            <maximumscore>1</maximumscore>
+            <activity-estimated-duration>218.48</activity-estimated-duration>
+            <resources>
+                <resource>
+                    <identifier>207983</identifier>
+                    <type>video</type>
+                    <thumbnailURL>media/S3_207983_life_2e_bre_olp_3pi_u02a_04.thumb.jpeg?filename=media/S3_207983_life_2e_bre_olp_3pi_u02a_04.thumb</thumbnailURL>
+                </resource>
+            </resources>
+            <answers/>
+            <activityTypeName>SDY21 Present</activityTypeName>
+            <activityTypeIdentifier>Present:Present:Present</activityTypeIdentifier>
+            <options>&lt;options data-author="options-v2"&gt;&lt;option id="368"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="441"&gt;&lt;key&gt;pause&lt;/key&gt;&lt;/option&gt;&lt;option id="525"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="051"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="512"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="027"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="028"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="319"&gt;&lt;key&gt;{"items":[]}&lt;/key&gt;&lt;/option&gt;&lt;option id="345"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="545"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="023"&gt;&lt;key&gt;true&lt;/key&gt;&lt;/option&gt;&lt;option id="029"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="025"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="054"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="050"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="313"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="046"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="449"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="312"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="450"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="336"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="318"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="570"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="390"&gt;&lt;key&gt;&lt;/key&gt;&lt;/option&gt;&lt;option id="045"&gt;&lt;key&gt;LO_setting&lt;/key&gt;&lt;/option&gt;&lt;option id="561"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="394"&gt;&lt;key&gt;1&lt;/key&gt;&lt;/option&gt;&lt;/options&gt;</options>
+        </screen>
+    </screens>
+    <metadata>
+        <lom>
+            <group name="Adaptive Courses" order="1"/>
+            <group name="Competencies" order="2"/>
+            <group name="General" order="3"/>
+            <group name="Depth of Knowledge Levels" order="4"/>
+            <group name="Course Objective Hierarchy (COH)" order="5"/>
+            <group name="CASAS Competencies" order="6"/>
+            <group name="CASAS Reading" order="7"/>
+            <group name="CCR Standards" order="8"/>
+            <group name="Common Core State Standards" order="9"/>
+            <group name="CEFR Descriptors" order="10"/>
+            <group name="ELP Standards" order="11"/>
+        </lom>
+    </metadata>
+    <LOOptions>&lt;options data-author="options-v2"&gt;&lt;option id="433"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="051"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="341"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="311"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="512"&gt;&lt;key&gt;marking_only&lt;/key&gt;&lt;/option&gt;&lt;option id="373"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="047"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="379"&gt;&lt;key&gt;&lt;/key&gt;&lt;value&gt;{"items":[{"label":""},{"label":"time_left"},{"label":"off"},{"label":"force_submit"},{"label":""},{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}],"selection":""}&lt;/value&gt;&lt;/option&gt;&lt;option id="335"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="342"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="375"&gt;&lt;key&gt;{"items":[]}&lt;/key&gt;&lt;/option&gt;&lt;option id="432"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="545"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="487"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="025"&gt;&lt;key&gt;true&lt;/key&gt;&lt;/option&gt;&lt;option id="050"&gt;&lt;key&gt;auto&lt;/key&gt;&lt;/option&gt;&lt;option id="313"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="521"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="419"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="046"&gt;&lt;key&gt;1_point_action&lt;/key&gt;&lt;/option&gt;&lt;option id="449"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="312"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="450"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="336"&gt;&lt;key&gt;always&lt;/key&gt;&lt;/option&gt;&lt;option id="522"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="334"&gt;&lt;key&gt;off&lt;/key&gt;&lt;value&gt;{&amp;amp;quot;items&amp;amp;quot;:[],&amp;amp;quot;selection&amp;amp;quot;:&amp;amp;quot;off&amp;amp;quot;}&lt;/value&gt;&lt;/option&gt;&lt;option id="570"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="315"&gt;&lt;key&gt;1&lt;/key&gt;&lt;/option&gt;&lt;option id="396"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="533"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="045"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="380"&gt;&lt;key&gt;false&lt;/key&gt;&lt;/option&gt;&lt;option id="393"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;option id="418"&gt;&lt;key&gt;[]&lt;/key&gt;&lt;/option&gt;&lt;option id="528"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="541"&gt;&lt;key&gt;on&lt;/key&gt;&lt;/option&gt;&lt;option id="550"&gt;&lt;key&gt;200&lt;/key&gt;&lt;/option&gt;&lt;option id="560"&gt;&lt;key&gt;["2","9","4","5","3","6"]&lt;/key&gt;&lt;/option&gt;&lt;option id="581"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;option id="582"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;option id="583"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;option id="584"&gt;&lt;key&gt;["2"]&lt;/key&gt;&lt;/option&gt;&lt;/options&gt;</LOOptions>
+    <skin>NGL_SDY</skin>
+    <mode>Normal</mode>
+    <title>2a | Grammar | Summary Review</title>
+    <assetCDNURL>media</assetCDNURL>
+    <type>Standard</type>
+    <toolbeltServer>//avallain-toolbelt-prod.avallain.net</toolbeltServer>
+    <geoGebra>//author-engine-production.avallain.net/geogebra/v5-0-672-0/HTML5/5.0/web/</geoGebra>
+    <mathJAX>//author-engine-production.avallain.net/mathjax/3.2.2</mathJAX>
+    <tts>
+        <voice>female-1</voice>
+        <service>https://tts.avallain.net/sync_converter</service>
+        <lang/>
+    </tts>
+    <lnrCDNURL>https://lnr-runtime-assets.s3-website-eu-west-1.amazonaws.com</lnrCDNURL>
+    <ckeditorRelative>false</ckeditorRelative>
+    <lang>en</lang>
+    <lmsApis>TinCan</lmsApis>
+    <maximumscore>1</maximumscore>
+    <engine>
+        <version>buckminster-48.0.2-3-g9bf942da2</version>
+        <downloadURL>https://author-engine-production.avallain.net/buckminster-48.0.2-3-g9bf942da2/engine.zip</downloadURL>
+        <root>https://author-engine-production.avallain.net/buckminster-48.0.2-3-g9bf942da2/</root>
+    </engine>
+    <designPack>
+        <version>ngl-secondary-2.4.3</version>
+        <downloadURL>//cen-author-prod-assets.avallain.net/designpack/NGL_SDY/7472d41a652d64a82093330e5eb8e2eb</downloadURL>
+        <root>//cen-author-prod-assets.avallain.net/designpack/NGL_SDY/7472d41a652d64a82093330e5eb8e2eb/</root>
+        <type>git</type>
+    </designPack>
+    <publishingType>
+        <class__>com.avallain.cat.view.PublishingType.Unity</class__>
+        <name>CEN Prod</name>
+        <configuration>{"online":"true", "assets": {
+           "export": "true",
+           "videoTypes": "mp4",
+           "audioTypes": "mp3"
+       }
+}</configuration>
+    </publishingType>
+    <lo-estimated-duration>218.48</lo-estimated-duration>
+    <resources/>
+    <dependencies/>
+    <profiles>
+        <profile>
+            <id>14</id>
+            <name>Secondary Assignment Settings</name>
+            <defaultProfile>false</defaultProfile>
+            <options>&lt;options data-author="options-v2"&gt;&lt;option id="311"&gt;&lt;key&gt;always&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="543"&gt;&lt;key&gt;off&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="521"&gt;&lt;key&gt;off&lt;/key&gt;&lt;/option&gt;&lt;option id="312"&gt;&lt;key&gt;off&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="556"&gt;&lt;key&gt;off&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="334"&gt;&lt;key&gt;always&lt;/key&gt;&lt;value&gt;{&amp;amp;quot;items&amp;amp;quot;:[{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;},{&amp;amp;quot;label&amp;amp;quot;:&amp;amp;quot;&amp;amp;quot;}],&amp;amp;quot;selection&amp;amp;quot;:&amp;amp;quot;always&amp;amp;quot;}&lt;/value&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="315"&gt;&lt;key&gt;1&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;option id="045"&gt;&lt;key&gt;false&lt;/key&gt;&lt;overwritable&gt;true&lt;/overwritable&gt;&lt;/option&gt;&lt;/options&gt;</options>
+            <updatedAt>2024-08-07 13:57:35</updatedAt>
+            <uuid>c74d5072-7156-488d-ad39-caa465e08d05</uuid>
+        </profile>
+    </profiles>
+    <assets>
+        <asset>
+            <identifier>207984</identifier>
+            <metadata>
+                <lom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="accordion" xsi:noNamespaceSchemaLocation="lom.xsd">
+                    <group name="Common"/>
+                </lom>
+                <lom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="accordion" xsi:noNamespaceSchemaLocation="lom.xsd">
+                    <group name="Common"/>
+                </lom>
+                <lom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="accordion" xsi:noNamespaceSchemaLocation="lom.xsd">
+                    <group name="File information" type="binary">
+                        <item description="Size" title="size" value_type="integer">
+                            <value description="24557"/>
+                        </item>
+                        <item description="Mime" title="mime" value_type="string">
+                            <value description="image/jpeg"/>
+                        </item>
+                        <item description="Type" title="type" value_type="string">
+                            <value description="image"/>
+                        </item>
+                        <item description="Md5 hash" title="md5hash" value_type="string">
+                            <value description="be4c94c7004e027a3bf217cba776a6d9"/>
+                        </item>
+                    </group>
+                    <group name="Image information" type="image">
+                        <item description="Width" title="width" value_type="number">
+                            <value description="1270"/>
+                        </item>
+                        <item description="Height" title="height" value_type="number">
+                            <value description="814"/>
+                        </item>
+                        <item description="Aspect ratio" title="aspect_ratio" value_type="string">
+                            <value description="1.56"/>
+                        </item>
+                        <item description="Date file modified" title="date_file_modified" value_type="string">
+                            <value description="2023/10/14 10:27:13 GMT"/>
+                        </item>
+                        <item description="Frame count" title="frame_count" value_type="integer">
+                            <value description="1"/>
+                        </item>
+                        <item description="Colorspace" title="colorspace" value_type="string">
+                            <value description="RGB"/>
+                        </item>
+                        <item description="has_clipping_path" title="has_clipping_path" value_type="boolean">
+                            <value description="false"/>
+                        </item>
+                        <item description="Average color" title="average_color" value_type="string">
+                            <value description="#fbf9f9"/>
+                        </item>
+                    </group>
+                    <group name="Audio information" type="audio"/>
+                    <group name="Video information" type="video">
+                        <item description="Width" title="width" value_type="number">
+                            <value description="1270"/>
+                        </item>
+                        <item description="Height" title="height" value_type="number">
+                            <value description="814"/>
+                        </item>
+                        <item description="Date file modified" title="date_file_modified" value_type="string">
+                            <value description="2023/10/14 10:27:13 GMT"/>
+                        </item>
+                        <item description="Aspect ratio" title="aspect_ratio" value_type="string">
+                            <value description="1.56"/>
+                        </item>
+                    </group>
+                    <group name="Document information" type="document">
+                        <item description="Width" title="width" value_type="number">
+                            <value description="1270"/>
+                        </item>
+                        <item description="Height" title="height" value_type="number">
+                            <value description="814"/>
+                        </item>
+                    </group>
+                </lom>
+            </metadata>
+            <filename>life 2e_bre_olp_3pi_u02a_04.jpg</filename>
+            <name>life 2e_bre_olp_3pi_u02a_04.jpg</name>
+            <referenceId>S3_207984_life_2e_bre_olp_3pi_u02a_04.jpg</referenceId>
+            <downloadURL>media/S3_207984_life_2e_bre_olp_3pi_u02a_04.jpg</downloadURL>
+        </asset>
+        <asset>
+            <identifier>207983</identifier>
+            <metadata>
+                <lom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="accordion" xsi:noNamespaceSchemaLocation="lom.xsd">
+                    <group name="Common"/>
+                </lom>
+                <lom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="accordion" xsi:noNamespaceSchemaLocation="lom.xsd">
+                    <group name="Common"/>
+                </lom>
+                <lom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="accordion" xsi:noNamespaceSchemaLocation="lom.xsd">
+                    <group name="File information" type="binary">
+                        <item description="Size" title="size" value_type="integer">
+                            <value description="3959097"/>
+                        </item>
+                        <item description="Mime" title="mime" value_type="string">
+                            <value description="video/mp4"/>
+                        </item>
+                        <item description="Type" title="type" value_type="string">
+                            <value description="video"/>
+                        </item>
+                        <item description="Md5 hash" title="md5hash" value_type="string">
+                            <value description="214650b3c0835c455ef0ff170839034a"/>
+                        </item>
+                    </group>
+                    <group name="Image information" type="image">
+                        <item description="Width" title="width" value_type="number">
+                            <value description="352"/>
+                        </item>
+                        <item description="Height" title="height" value_type="number">
+                            <value description="288"/>
+                        </item>
+                        <item description="Aspect ratio" title="aspect_ratio" value_type="string">
+                            <value description="1.222"/>
+                        </item>
+                        <item description="Date file modified" title="date_file_modified" value_type="string">
+                            <value description="2023/10/14 10:34:33 GMT"/>
+                        </item>
+                        <item description="Device vendor" title="device_vendor" value_type="string">
+                            <value description="Apple"/>
+                        </item>
+                    </group>
+                    <group name="Audio information" type="audio">
+                        <item description="Duration" title="duration" value_type="number">
+                            <value description="216.38"/>
+                        </item>
+                        <item description="Audio bitrate" title="audio_bitrate" value_type="integer">
+                            <value description="120160"/>
+                        </item>
+                        <item description="Audio samplerate" title="audio_samplerate" value_type="integer">
+                            <value description="32000"/>
+                        </item>
+                        <item description="Audio channels" title="audio_channels" value_type="integer">
+                            <value description="2"/>
+                        </item>
+                        <item description="Audio codec" title="audio_codec" value_type="string">
+                            <value description="ffaac"/>
+                        </item>
+                    </group>
+                    <group name="Video information" type="video">
+                        <item description="Width" title="width" value_type="number">
+                            <value description="352"/>
+                        </item>
+                        <item description="Height" title="height" value_type="number">
+                            <value description="288"/>
+                        </item>
+                        <item description="Framerate" title="framerate" value_type="number">
+                            <value description="15"/>
+                        </item>
+                        <item description="Video bitrate" title="video_bitrate" value_type="number">
+                            <value description="22568"/>
+                        </item>
+                        <item description="Video codec" title="video_codec" value_type="string">
+                            <value description="ffh264"/>
+                        </item>
+                        <item description="Seekable" title="seekable" value_type="boolean">
+                            <value description="true"/>
+                        </item>
+                        <item description="Audio bitrate" title="audio_bitrate" value_type="integer">
+                            <value description="120160"/>
+                        </item>
+                        <item description="Audio samplerate" title="audio_samplerate" value_type="integer">
+                            <value description="32000"/>
+                        </item>
+                        <item description="Audio channels" title="audio_channels" value_type="integer">
+                            <value description="2"/>
+                        </item>
+                        <item description="Audio codec" title="audio_codec" value_type="string">
+                            <value description="ffaac"/>
+                        </item>
+                        <item description="Date file modified" title="date_file_modified" value_type="string">
+                            <value description="2023/10/14 10:34:33 GMT"/>
+                        </item>
+                        <item description="Device vendor" title="device_vendor" value_type="string">
+                            <value description="Apple"/>
+                        </item>
+                        <item description="Duration" title="duration" value_type="number">
+                            <value description="216.38"/>
+                        </item>
+                        <item description="Aspect ratio" title="aspect_ratio" value_type="string">
+                            <value description="1.222"/>
+                        </item>
+                    </group>
+                    <group name="Document information" type="document">
+                        <item description="Width" title="width" value_type="number">
+                            <value description="352"/>
+                        </item>
+                        <item description="Height" title="height" value_type="number">
+                            <value description="288"/>
+                        </item>
+                    </group>
+                </lom>
+            </metadata>
+            <filename>life 2e_bre_olp_3pi_u02a_04.mp4</filename>
+            <name>life 2e_bre_olp_3pi_u02a_04.mp4</name>
+            <referenceId>S3_207983_life_2e_bre_olp_3pi_u02a_04.orig.mp4</referenceId>
+            <downloadURL>media/S3_207983_life_2e_bre_olp_3pi_u02a_04.orig.mp4</downloadURL>
+        </asset>
+    </assets>
+    <pages/>
+    <solution-pages/>
+    <audio>mp3</audio>
+    <video>mp4</video>
+    <acuda/>
+    <external-services-required>
+        <item>tincan</item>
+    </external-services-required>
+    <thumbnails/>
+</LearningObjectInfo>

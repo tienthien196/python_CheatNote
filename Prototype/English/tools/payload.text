@@ -1,0 +1,12 @@
+
+
+"""
+stateId=suspend_data&activityId=http%3A%2F%2Fweb-cen-unity-prod.avallain.net%2Fidentifiers%2Fcontents%2Fd32ef972-fdba-4551-aebb-dc3f18f260e5&agent=%7B%22objectType%22%3A%22Agent%22%2C%22account%22%3A%7B%22name%22%3A%227eaa9602-e032-4de6-b645-e42c19fdd16f%22%2C%22homePage%22%3A%22http%3A%2F%2Fweb-cen-unity-prod.avallain.net%2Fidentifiers%2Fusers%2F7eaa9602-e032-4de6-b645-e42c19fdd16f%22%7D%7D&registration=16eea48a-9c6e-4371-a0d6-d4c5c5114938
+"""
+
+
+"""bookmark"""
+https://learn.eltngl.com/lrs/xAPI/activities/state?stateId=bookmark&activityId=http%3A%2F%2Fweb-cen-unity-prod.avallain.net%2Fidentifiers%2Fcontents%2Fd32ef972-fdba-4551-aebb-dc3f18f260e5&agent=%7B%22objectType%22%3A%22Agent%22%2C%22account%22%3A%7B%22name%22%3A%227eaa9602-e032-4de6-b645-e42c19fdd16f%22%2C%22homePage%22%3A%22http%3A%2F%2Fweb-cen-unity-prod.avallain.net%2Fidentifiers%2Fusers%2F7eaa9602-e032-4de6-b645-e42c19fdd16f%22%7D%7D&registration=16eea48a-9c6e-4371-a0d6-d4c5c5114938
+{page
+: 
+"0"}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p2" xmlns:ava="http://www.avallain.com/author" xmlns:ims="http://www.imsglobal.org/xsd/apip/apipv1p0/imsapip_qtiv1p0" xmlns:mat="http://www.w3.org/1998/Math/MathML" xmlns:ns7="http://www.w3.org/2010/Math/MathML" xmlns:ns9="http://www.w3.org/2010/10/synthesis" xmlns:qh5="http://www.imsglobal.org/xsd/imsqtiv2p2_html5_v1p0" xmlns:syn="http://www.w3.org/2001/10/synthesis" xmlns:xin="http://www.w3.org/2001/XInclude" xmlns:xli="http://www.w3.org/1999/xlink" template="layout_01A" title="1a | Grammar 1 | Exercise 4" toolName="Avallain Author" identifier="Input:Completion:Text gap" timeDependent="false" adaptive="false"><responseDeclaration identifier="RESPONSE0" baseType="string" cardinality="single"><correctResponse><value>Where does Nathan work</value></correctResponse></responseDeclaration><responseDeclaration identifier="RESPONSE1" baseType="string" cardinality="single"><correctResponse><value>Where does he often go</value></correctResponse></responseDeclaration><responseDeclaration identifier="RESPONSE2" baseType="string" cardinality="single"><correctResponse><value>What does he find and study</value></correctResponse></responseDeclaration><responseDeclaration identifier="RESPONSE3" baseType="string" cardinality="single"><correctResponse><value>Where does he spend a lot of time</value></correctResponse></responseDeclaration><responseDeclaration identifier="RESPONSE4" baseType="string" cardinality="single"><correctResponse><value>Why do new viruses travel more easily</value></correctResponse></responseDeclaration><responseDeclaration identifier="RESPONSE5" baseType="string" cardinality="single"><correctResponse><value>What does he need for his work</value></correctResponse></responseDeclaration><responseDeclaration identifier="RESPONSE6" baseType="string" cardinality="single"><correctResponse><value>Do people have electricity in every part of the world</value></correctResponse></responseDeclaration><responseDeclaration identifier="RESPONSE7" baseType="string" cardinality="single"><correctResponse><value>How does Nathan communicate</value></correctResponse></responseDeclaration><outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer" /><itemBody><div id="rubric"><h3><strong>Present simple </strong></h3><p><strong>Write questions about Nathan Wolfe and his work. Use the present simple.</strong></p>
+</div><div id="content" data-option394="[-1,-1,-1,-1,-1,-1,-1,-1]"><div id="contentblock"><p>(where / Nathan / work )</p>
+
+<p><textEntryInteraction responseIdentifier="RESPONSE0" />?</p>
+
+<p>All over the world.</p>
+</div><div id="contentblock"><p>(where / he / often / go)</p>
+
+<p><textEntryInteraction responseIdentifier="RESPONSE1" />?</p>
+
+<p>To places with health problems.</p>
+</div><div id="contentblock"><p>(what / he / find and study)</p>
+
+<p><textEntryInteraction responseIdentifier="RESPONSE2" />?</p>
+
+<p>Virus and diseases from animals.</p>
+</div><div id="contentblock"><p>(where / he / spend / a lot of time)</p>
+
+<p><textEntryInteraction responseIdentifier="RESPONSE3" />?</p>
+
+<p>In regions with wildlife.</p>
+</div><div id="contentblock"><p>(why / new viruses / travel more easily)</p>
+
+<p><textEntryInteraction responseIdentifier="RESPONSE4" />?</p>
+
+<p>Because humans travel all over the world.</p>
+</div><div id="contentblock"><p>(what / he / need / for his work)</p>
+
+<p><textEntryInteraction responseIdentifier="RESPONSE5" />?</p>
+
+<p>Modern technology.</p>
+</div><div id="contentblock"><p>(people / have electricity / every part of the world)</p>
+
+<p><textEntryInteraction responseIdentifier="RESPONSE6" />?</p>
+
+<p>No, they donât.</p>
+</div><div id="contentblock"><p>(how / Nathan / communicate)</p>
+
+<p><textEntryInteraction responseIdentifier="RESPONSE7" />?</p>
+
+<p>With a mobile phone.</p>
+</div></div><div id="media" /></itemBody><responseProcessing><responseCondition><responseIf><isNull><variable identifier="RESPONSE0" /></isNull><setOutcomeValue identifier="SCORE"><sum><variable identifier="SCORE" /><baseValue baseType="integer">0</baseValue></sum></setOutcomeValue></responseIf></responseCondition><responseCondition><responseIf><match><variable identifier="RESPONSE0" /><correct identifier="RESPONSE0" /></match><setOutcomeValue identifier="SCORE"><sum><variable identifier="SCORE" /><baseValue baseType="integer">1</baseValue></sum></setOutcomeValue></responseIf></responseCondition><responseCondition><responseIf><match><variable identifier="RESPONSE1" /><correct identifier="RESPONSE1" /></match><setOutcomeValue identifier="SCORE"><sum><variable identifier="SCORE" /><baseValue baseType="integer">1</baseValue></sum></setOutcomeValue></responseIf></responseCondition><responseCondition><responseIf><match><variable identifier="RESPONSE2" /><correct identifier="RESPONSE2" /></match><setOutcomeValue identifier="SCORE"><sum><variable identifier="SCORE" /><baseValue baseType="integer">1</baseValue></sum></setOutcomeValue></responseIf></responseCondition><responseCondition><responseIf><match><variable identifier="RESPONSE3" /><correct identifier="RESPONSE3" /></match><setOutcomeValue identifier="SCORE"><sum><variable identifier="SCORE" /><baseValue baseType="integer">1</baseValue></sum></setOutcomeValue></responseIf></responseCondition><responseCondition><responseIf><match><variable identifier="RESPONSE4" /><correct identifier="RESPONSE4" /></match><setOutcomeValue identifier="SCORE"><sum><variable identifier="SCORE" /><baseValue baseType="integer">1</baseValue></sum></setOutcomeValue></responseIf></responseCondition><responseCondition><responseIf><match><variable identifier="RESPONSE5" /><correct identifier="RESPONSE5" /></match><setOutcomeValue identifier="SCORE"><sum><variable identifier="SCORE" /><baseValue baseType="integer">1</baseValue></sum></setOutcomeValue></responseIf></responseCondition><responseCondition><responseIf><match><variable identifier="RESPONSE6" /><correct identifier="RESPONSE6" /></match><setOutcomeValue identifier="SCORE"><sum><variable identifier="SCORE" /><baseValue baseType="integer">1</baseValue></sum></setOutcomeValue></responseIf></responseCondition><responseCondition><responseIf><match><variable identifier="RESPONSE7" /><correct identifier="RESPONSE7" /></match><setOutcomeValue identifier="SCORE"><sum><variable identifier="SCORE" /><baseValue baseType="integer">1</baseValue></sum></setOutcomeValue></responseIf></responseCondition></responseProcessing></assessmentItem>

@@ -1,8 +1,13 @@
 import requests
 from datetime import datetime
+import re
+import json
+import os
 
-key = "d32ef972-fdba-4551-aebb-dc3f18f260e5"
-cookie = "_unity_session=a629be948ae4f6351e864ffed27c93a0"
+
+keys = ["4e6d6d4c-853f-4e86-8e01-46555d91271d", "2dc90c25-8733-4174-aded-7524cde0a1ea", "d68b089e-db75-452c-a3e6-185e8171e1ef"]
+key = "0afa6520-34c2-4829-9953-22b098670ee9"
+cookie = "_unity_session=32237839b27c83dc7b546681e72c5c14"
 # Cấu hình URL và headers
 url = "https://learn.eltngl.com/cdn_proxy/"+ key + "/data.js"
 
@@ -33,7 +38,8 @@ last_modified = "Thu, 18 Sep 2025 10:18:25 GMT"
 
 # headers["If-None-Match"] = f'W/{etag}'
 # headers["If-Modified-Since"] = last_modified
-
+js_content = '''
+'''
 try:
     response = requests.get(url, headers=headers)
 
@@ -41,15 +47,33 @@ try:
     print(f"Response Headers: {dict(response.headers)}")
 
     if response.status_code == 304:
-        print(response.text)
+
         print("✅ Nội dung chưa thay đổi (304 Not Modified). Dùng dữ liệu cũ.")
     elif response.status_code == 200:
         print("✅ Nhận được dữ liệu mới:")
+        js_content = response.text
         # In nội dung (có thể là JS hoặc JSON)
-        print(response.text)
+
     else:
         print(f"❌ Lỗi không mong muốn: {response.status_code}")
-        print(response.text)
+
 
 except requests.exceptions.RequestException as e:
     print(f"❌ Lỗi kết nối: {e}")
+
+
+# 2. Tách phần JSON
+raw_json = re.search(r'ajaxData\s*=\s*({.*?})\s*;', js_content, flags=re.S).group(1)
+data = json.loads(raw_json)
+
+
+# 3. Tạo thư mục chứa kết quả
+os.makedirs(r'./output', exist_ok=True)
+
+# 4. Ghi từng file
+for filename, xml_escaped in data.items():
+    xml_clean = xml_escaped.encode().decode('unicode-escape')
+    with open(os.path.join('output' , filename), 'w', encoding='utf-8') as f:
+        f.write(xml_clean)
+
+print('Đã ghi xong các file vào thư mục "output"')

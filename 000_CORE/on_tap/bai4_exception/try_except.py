@@ -112,7 +112,7 @@ try:
 except ValueError as e:
     raised_error = str(e)
 
-print_example('raise ValueError("...")', "Tự phát sinh lỗi", raised_out)
+print_example('raise ValueError("...")', "Tự phát sinh lỗi", )
 
 
 # ==============================================================================

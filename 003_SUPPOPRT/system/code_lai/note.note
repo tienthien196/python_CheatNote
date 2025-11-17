@@ -1,0 +1,65 @@
+String Formatting (Old-Style: % Operator)
+│
+├── 🔢 Số nguyên (Integers)
+│   ├── %d  → Số nguyên thập phân có dấu (signed decimal)
+│   ├── %i  → Tương tự %d (dùng trong C, Python giữ lại cho tương thích)
+│   ├── %o  → Số nguyên bát phân (octal) có dấu → VD: %o % 10 → '12'
+│   ├── %u  → ⚠️ LỖI THỜI! Giống %d, không dùng nữa (obsolete từ Python 3+)
+│   ├── %x  → Thập lục phân thường (hex, lowercase) → VD: %x % 255 → 'ff'
+│   └── %X  → Thập lục phân hoa (uppercase) → VD: %X % 255 → 'FF'
+│
+├── 📏 Số thực (Floating Point)
+│   ├── %f  → Định dạng thập phân cố định → VD: %.2f % 3.14159 → '3.14'
+│   ├── %F  → Giống %f, nhưng xử lý NaN/Inf khác (hiếm dùng)
+│   ├── %e  → Ký hiệu khoa học (exponential, lowercase) → VD: %e % 123 → '1.230000e+02'
+│   ├── %E  → Ký hiệu khoa học (uppercase) → VD: %E % 123 → '1.230000E+02'
+│   ├── %g  → Tự động chọn giữa %f và %e (loại bỏ số 0 thừa, lowercase)
+│   └── %G  → Tự động chọn giữa %F và %E (uppercase)
+│
+├── 🔤 Chuỗi & Ký tự (Strings & Characters)
+│   ├── %c  → Ký tự đơn: nhận int (mã ASCII/Unicode) hoặc chuỗi 1 ký tự
+│   │        → VD: %c % 65 → 'A';  %c % 'Z' → 'Z'
+│   ├── %s  → Chuỗi: dùng str() để chuyển đổi đối tượng → thân thiện, dễ đọc
+│   └── %r  → Chuỗi "đại diện": dùng repr() → có dấu nháy, dùng để debug
+│
+└── 🛑 Ký tự đặc biệt
+    └── %%  → In ra ký tự '%' (escape ký tự %)
+            → VD: "Tỷ lệ: %d%%" % 95 → "Tỷ lệ: 95%"
+
+Date & Time Formatting Codes (strftime / strptime)
+│
+├── 📅 1. Ngày trong tuần & Tháng
+│   ├── %a  → Thứ rút gọn (Sun, Mon, ..., Sat)
+│   ├── %A  → Thứ đầy đủ (Sunday, Monday, ..., Saturday)
+│   ├── %b  → Tháng rút gọn (Jan, Feb, ..., Dec)
+│   └── %B  → Tên tháng đầy đủ (January, February, ..., December)
+│
+├── 🗓️ 2. Ngày & Năm
+│   ├── %d  → Ngày trong tháng (01–31) — có số 0 dẫn đầu
+│   ├── %j  → Ngày trong năm (001–366)
+│   ├── %y  → Năm 2 chữ số (00–99) → VD: 24 = 2024
+│   └── %Y  → Năm 4 chữ số → VD: 2024
+│
+├── 🕒 3. Giờ, Phút, Giây
+│   ├── %H  → Giờ 24h (00–23)
+│   ├── %I  → Giờ 12h (01–12)
+│   ├── %p  → AM hoặc PM
+│   ├── %M  → Phút (00–59)
+│   └── %S  → Giây (00–61) → 60/61 cho leap second (hiếm)
+│
+├── 📆 4. Số tuần trong năm
+│   ├── %U  → Tuần tính từ Chủ Nhật (00–53)
+│   ├── %W  → Tuần tính từ Thứ Hai (00–53)
+│   └── %w  → Thứ trong tuần: 0=Chủ Nhật, 1=Thứ Hai, ..., 6=Thứ Bảy
+│
+├── 📦 5. Định dạng mặc định hệ thống
+│   ├── %c  → Ngày + giờ đầy đủ (theo locale) → VD: "Sun Dec 25 14:30:00 2024"
+│   ├── %x  → Chỉ ngày (theo locale) → VD: "12/25/24"
+│   └── %X  → Chỉ giờ (theo locale) → VD: "14:30:00"
+│
+├── 🌍 6. Múi giờ
+│   └── %Z  → Tên múi giờ (nếu có) → VD: "UTC", "ICT", "PST" (có thể rỗng nếu naive)
+│
+└── 🛑 7. Ký tự đặc biệt
+    └── %%  → In ra ký tự '%' (dùng để escape)
+            → VD: "Progress: %d%%" → "Progress: 75%"

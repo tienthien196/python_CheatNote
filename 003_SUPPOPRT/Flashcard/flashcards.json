@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Python là ngôn ngữ lập trình loại gì?",
+        "answer": "Ngôn ngữ lập trình bậc cao, thông dịch, hướng đối tượng."
+    },
+    {
+        "question": "Câu lệnh nào dùng để in ra màn hình trong Python?",
+        "answer": "print()"
+    },
+    {
+        "question": "Làm thế nào để tạo một danh sách (list) trống trong Python?",
+        "answer": "list = []  hoặc  list = list()"
+    },
+    {
+        "question": "Từ khóa nào dùng để định nghĩa hàm trong Python?",
+        "answer": "def"
+    },
+    {
+        "question": "Giá trị boolean nào biểu thị 'sai' trong Python?",
+        "answer": "False"
+    },
+    {
+        "question": "tiến thiện lầ ai ?",
+        "answer": "là nhà vua"
+    }
+]

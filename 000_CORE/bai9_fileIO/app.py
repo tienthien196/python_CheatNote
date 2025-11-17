@@ -7,4 +7,3 @@ file.write(f"file name : {file_name}\n context file: {context}\n")
 print("Data written successfully !")
 file.close()
 
-

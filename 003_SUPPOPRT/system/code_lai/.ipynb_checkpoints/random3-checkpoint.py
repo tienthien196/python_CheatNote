@@ -3,8 +3,9 @@
 Module random trong Python cung cấp các hàm để sinh số ngẫu nhiên.
 Dưới đây là danh sách các hàm được export từ module random, cùng mô tả cách dùng, tham số và ví dụ.
 """
-
+list
 import random
+
 # Một instance duy nhất của lớp Random() được tạo để dùng chung cho toàn module
 # Điều này giúp các hàm như randint(), choice(),... hoạt động như các hàm module mà không cần khởi tạo object.
 # _inst = Random()

@@ -34,7 +34,7 @@ print("=== ĐƯỜNG DẪN ===")
 # Lấy thư mục làm việc hiện tại
 print("os.getcwd():", os.getcwd())
 
-# Thay đổi thư mục làm việc
+# Thay đổi thư mục làm việc    
 # os.chdir('/path/to/new/dir')
 
 # Kiểm tra đường dẫn tồn tại
@@ -43,6 +43,7 @@ print("os.path.exists('os_example.py'):", os.path.exists('os_example.py'))
 # Kiểm tra đường dẫn là thư mục hay file
 print("os.path.isdir('.'):", os.path.isdir('.'))  # Thư mục hiện tại
 print("os.path.isfile('os_example.py'):", os.path.isfile('os_example.py'))
+
 
 # Tách tên thư mục và tên file
 path = "/home/user/file.txt"

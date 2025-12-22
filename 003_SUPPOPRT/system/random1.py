@@ -23,13 +23,12 @@ def print_example(code, desc, result):
 # 1. CẤU TRÚC CƠ BẢN & HÀM NGẪU NHIÊN ĐƠN GIẢN
 # ==============================================================================
 print_section("1. Hàm ngẫu nhiên cơ bản")
-print("--- Sinh số ngẫu nhiên ---")
+print("--- Sinh số ngẫu nhiên ---")      
 
 print_example("random.random()", "Số float [0.0, 1.0)", random.random())
 print_example("random.uniform(1.5, 10.5)", "Số float trong khoảng [a, b]", random.uniform(1.5, 10.5))
 print_example("random.randint(1, 10)", "Số nguyên trong khoảng [a, b]", random.randint(1, 10))
 print_example("random.randrange(0, 10, 2)", "Số nguyên trong range(start, stop, step)", random.randrange(0, 10, 2))
-
 # ==============================================================================
 # 2. CHỌN NGẪU NHIÊN
 # ==============================================================================

@@ -8,6 +8,7 @@ import subprocess
 from datetime import datetime
 
 
-bi = {"name": "tiến thiện"}
+bi = {"name1": "tiến thiện"}
 
-print(bi.get("name"))
+print(bi.get("name", "___None___"))
+

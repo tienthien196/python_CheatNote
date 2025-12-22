@@ -236,3 +236,10 @@ def demo() -> None:
 
 if __name__ == "__main__":
     demo()
+
+
+    # function tool
+    # @overload, @lru_cache, @cached_property, @wraps
+
+    #@contextManager -> yield
+    #@decorator define

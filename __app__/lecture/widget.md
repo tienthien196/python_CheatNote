@@ -1,3 +1,5 @@
+
+### 📌 Các thuộc tính (Properties) chính của QWidget
 | Thuộc tính                   | Mô tả                                  | Ví dụ                                                                 |
 | ---------------------------- | -------------------------------------- | --------------------------------------------------------------------- |
 | `x`, `y`                     | Tọa độ của widget so với cha           | `widget.x()`                                                          |
@@ -19,6 +21,7 @@
 
 
 ---
+### 🔧 Các phương thức (Methods) chính của QWidget
 | Phương thức                   | Mô tả                             | Ví dụ                                                          |
 | ----------------------------- | --------------------------------- | -------------------------------------------------------------- |
 | `move(x, y)`                  | Di chuyển widget                  | `widget.move(50, 50)`                                          |
@@ -44,7 +47,7 @@
 | `setAttribute(attr, on=True)` | Thiết lập thuộc tính Qt           | `widget.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose)`     |
 | `testAttribute(attr)`         | Kiểm tra thuộc tính               | `widget.testAttribute(Qt.WidgetAttribute.WA_DeleteOnClose)`    |
 ---
-### signal 
+### 📣 Các tín hiệu (Signals) chính của QWidget
 | Tín hiệu                          | Mô tả                               |
 | --------------------------------- | ----------------------------------- |
 | `windowTitleChanged(title)`       | Phát khi tiêu đề thay đổi           |
